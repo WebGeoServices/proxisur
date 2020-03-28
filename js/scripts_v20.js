@@ -5,12 +5,12 @@ switch(path) {
     var intialLat = 42.454540;
     var intialLong = 14.142080;
     var intialZoom = 11;
-    break; 
+    break;
   case 'barletta-andria-trani':
     var intialLat = 41.319279;
     var intialLong = 16.283991;
     var intialZoom = 11;
-    break;      
+    break;
   case 'ferrara':
     var intialLat = 44.838123;
     var intialLong = 11.619787;
@@ -30,21 +30,21 @@ switch(path) {
     var intialLat = 44.647099;
     var intialLong = 10.925190;
     var intialZoom = 11;
-    break;  
+    break;
   case 'reggioemilia':
     var intialLat = 44.696239;
     var intialLong = 10.627900;
     var intialZoom = 11;
-    break;    
+    break;
   case 'torino':
     var intialLat = 45.070339;
     var intialLong = 7.686864;
     var intialZoom = 12;
     break;
   default:
-    var intialLat = 45.361839;
-    var intialLong = 9.683230;
-    var intialZoom = 7;
+    var intialLat = 46.1313871;
+    var intialLong = 1;
+    var intialZoom = 6;
 }
 
 var storeLocatorConfig = {
@@ -52,7 +52,7 @@ var storeLocatorConfig = {
     "primary_color": "#D81A60"
   },
   "datasource": {
-    "api_key": "woos-9aa31a07-fc32-392e-a112-bd5d7350a7e0",
+    "api_key": "woos-dac827d8-2486-3f46-99e2-a25338988fdb",
     "max_responses": 150,
     "max_distance": 20000,
     "use_distance_matrix": false,
@@ -61,7 +61,7 @@ var storeLocatorConfig = {
     "useRecommendation": false
   },
   "internationalization": {
-    "lang": "it",
+    "lang": "fr",
     "unitSystem": 0,
     "customTranslations": {
       "it": {
@@ -79,12 +79,12 @@ var storeLocatorConfig = {
   "maps": {
     "provider": "google",
     "api_key": "AIzaSyBN8I1KsGyHdCkDEHY0G4-m6wZBzVwVVr0",
-    "geocoder": { "region": "it" },
+    "geocoder": { "region": "fr" },
     "disableDirections": true,
     "localities": {
-      "language": "it",
+      "language": "fr",
       "componentRestrictions": {
-          "country": ["it"]
+          "country": ["fr"]
       },
       "types": ["locality", "postal_code"],
     },
@@ -540,7 +540,7 @@ const getDistance = function (store) {
 };
 
 var loadStoreLocator = function () {
-  var webapp = new WebApp('store-locator', 'woos-9aa31a07-fc32-392e-a112-bd5d7350a7e0');
+  var webapp = new WebApp('store-locator', 'woos-dac827d8-2486-3f46-99e2-a25338988fdb');
   var isMobile = document.querySelector('body').clientWidth < 750;
 
   webapp.setConf(storeLocatorConfig);
@@ -561,7 +561,7 @@ var loadStoreLocator = function () {
       html.push(getShipsToWhere(store));
       html.push(getShipsToCost(store));
       html.push(getContacts(store));
-    
+
       myCustomContent.innerHTML = html.join("");
       return myCustomContent;
   });
@@ -586,13 +586,13 @@ var loadStoreLocator = function () {
 };
 
 
-if (document.readyState === "complete") {
+/*if (document.readyState === "complete") {
   loadStoreLocator();
-}
+}*/
 if (document.addEventListener) {
   document.addEventListener("DOMContentLoaded", loadStoreLocator, false);
 }
-if (window.addEventListener) {
+else if (window.addEventListener) {
   window.addEventListener("load", loadStoreLocator, false);
 } else if (window.attachEvent) {
   window.attachEvent("onload", loadStoreLocator);
