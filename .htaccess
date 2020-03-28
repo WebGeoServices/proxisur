@@ -1,0 +1,14 @@
+RewriteEngine On
+RewriteBase /
+
+RewriteRule ^contact$ contact.html [L]
+RewriteRule ^about$ about.html [L]
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ /index.php?s=$1 [L]
+
+#RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.php\?s=([^\&\ ]+)
+#RewriteRule ^/?index\.php$ /%1? [L,R=301]
+
+redirect 301 /info.html https://vicinoesicuro.it/about
