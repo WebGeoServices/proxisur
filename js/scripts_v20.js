@@ -450,24 +450,24 @@ const getShipsToCost = function (store) {
 };
 
 const tagLabels = {
-    "abbigliamento": "Abbigliamento",
-    "bar_gelateria": "Bar / Gelateria",
-    "edicola_cartoleria": "Edicola / Cartoleria",
-    "elettronica_telefonia": "Elettronica / Telefonia",
-    "farmacia_erboristeria": "Farmacia / Erboristeria",
-    "fiorista": "Fiorista",
-    "forno": "Forno",
-    "generi_alimentari": "Generi alimentari",
-    "hobby_e_tempo_libero": "Hobby e tempo libero",
-    "igiene_e_bellezza": "Igiene e Bellezza",
-    "lavanderia": "Lavanderia",
-    "ottico": "Ottico",
-    "per_gli_animali": "Per gli animali",
-    "per_il_bambino": "Per il bambino",
-    "per_la_casa": "Per la casa",
-    "ristorazione": "Ristorazione",
-    "supermercato": "Supermercato",
-    "altro": "Altro"
+    "habillement": "Habillement",
+    "bar": "Bar",
+    "kiosque_papeterie": "Kiosque à journaux / papeterie",
+    "electronique_telephonie": "Electronique / Téléphonie",
+    "pharmacie": "Pharmacie",
+    "fleuriste": "Fleuriste",
+    "boulangerie": "Boulangerie",
+    "alimentation_generale": "Alimentation Générale",
+    "loisirs": "Loisirs",
+    "hygiene_beaute": "Hygiène et beauté",
+    "pressing": "Pressing",
+    "optique": "Optique",
+    "animalerie": "Animalerie",
+    "puericulture": "Puériculture",
+    "maison_ameublement": "Maison / Ameublement",
+    "restauration": "Restauration",
+    "supermarche": "Supermarché",
+    "autre": "Autre"
 };
 const getTags = function (store) {
     let tagsHTMLList = '';
