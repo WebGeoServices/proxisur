@@ -498,7 +498,7 @@ const getCategories = function (store) {
 };
 
 const getCategoriesNoTitle = function (store) {
-    const getCategories = store.properties.types[0];
+    const getCategories = store.properties.tags[0];
     const getOtherCats = store.properties.user_properties.other_cats;
     // if (getOtherCats) other_cats = '<strong>:</strong> ' + getOtherCats;
     // return '<p class="storeInfo getCategories">'+getCategories+'</p>'; */
