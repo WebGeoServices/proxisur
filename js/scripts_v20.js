@@ -431,7 +431,7 @@ const getContacts = function (store) {
     let website = store.properties.contact.website;
     let html = "";
     // html += getPhone(store);
-    if (phone) html += '<a href="tel:' + phone + '" class="btn">Effettua telefonata</a>';
+    if (phone) html += '<a href="tel:' + phone + '" class="btn">Téléphone</a>';
     if (email) html += '<a href="mailto:' + email + '" class="btn">Envoyer un email</a>';
     if (website) html += '<a href="http://' + website + '" class="btn">Visiter le site web</a>';
     return '<div class="">' + html + '</div><br>';
