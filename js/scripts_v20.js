@@ -586,9 +586,9 @@ var loadStoreLocator = function () {
 };
 
 
-/*if (document.readyState === "complete") {
+if (document.readyState === "complete") {
   loadStoreLocator();
-}*/
+}
 if (document.addEventListener) {
   document.addEventListener("DOMContentLoaded", loadStoreLocator, false);
 }
