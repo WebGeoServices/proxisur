@@ -588,7 +588,10 @@ var autocompleteService = new woosmap.localities.AutocompleteService(woosmapKey)
 var locality = window.location.hash.substr(1);
 if (locality) {
   autocompleteService.getQueryPredictions({
-    input:locality
+    input:locality,
+    components:{
+      country: ['fr']
+    }
   }, response => {
     if(response && response.localities && response.localities.length > 0) {
       document.title = document.title + ' sur ' + response.localities[0].name;
