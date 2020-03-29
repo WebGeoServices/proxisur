@@ -97,6 +97,7 @@ var storeLocatorConfig = {
       "lng": intialLong
     },
     "initialZoom": intialZoom,
+    "fitBounds": true,
     "tileStyle": {
       "color": "#D81A60",
       "size": 11,
