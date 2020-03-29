@@ -363,27 +363,27 @@ var storeLocatorConfig = {
       {
         "propertyType": "tag",
         "title": {
-          "it": ""
+          "fr": ""
         },
         "choices": [
-          {"key": "abbigliamento","it": "Abbigliamento"},
-          {"key": "bar_gelateria","it": "Bar / Gelateria"},
-          {"key": "edicola_cartoleria","it": "Edicola / Cartoleria"},
-          {"key": "elettronica_telefonia","it": "Elettronica / Telefonia"},
-          {"key": "farmacia_erboristeria","it": "Farmacia / Erboristeria"},
-          {"key": "fiorista","it": "Fiorista"},
-          {"key": "forno","it": "Forno"},
-          {"key": "generi_alimentari","it": "Generi alimentari"},
-          {"key": "hobby_e_tempo_libero","it": "Hobby e tempo libero"},
-          {"key": "igiene_e_bellezza","it": "Igiene e Bellezza"},
-          {"key": "lavanderia","it": "Lavanderia"},
-          {"key": "ottico","it": "Ottico"},
-          {"key": "per_gli_animali","it": "Per gli animali"},
-          {"key": "per_il_bambino","it": "Per il bambino"},
-          {"key": "per_la_casa","it": "Per la casa"},
-          {"key": "ristorazione","it": "Ristorazione"},
-          {"key": "supermercato","it": "Supermercato"},
-          {"key": "altro","it": "Altro"}
+          {"key": "habillement","fr": "Habillement"},
+          {"key": "bar","fr": "Bar"},
+          {"key": "kiosque_papeterie","fr": "Kiosque à journaux / papeterie"},
+          {"key": "electronique_telephonie","fr": "Electronique / Téléphonie"},
+          {"key": "pharmacie","fr": "Pharmacie"},
+          {"key": "fleuriste","fr": "Fleuriste"},
+          {"key": "boulangerie","fr": "Boulangerie"},
+          {"key": "alimentation_generale","fr": "Alimentation Générale"},
+          {"key": "loisirs","fr": "Loisirs"},
+          {"key": "hygiene_beaute","fr": "Hygiène et beauté"},
+          {"key": "pressing","fr": "Pressing"},
+          {"key": "optique","fr": "Optique"},
+          {"key": "animalerie","fr": "Animalerie"},
+          {"key": "puericulture","fr": "Puériculture"},
+          {"key": "maison_ameublement","fr": "Maison / Ameublement"},
+          {"key": "restauration","fr": "Restauration"},
+          {"key": "supermarche","fr": "Supermarché"},
+          {"key": "autre","fr": "Autre"}
         ],
         "innerOperator": "or"
       }/*,
@@ -432,8 +432,8 @@ const getContacts = function (store) {
     let html = "";
     // html += getPhone(store);
     if (phone) html += '<a href="tel:' + phone + '" class="btn">Effettua telefonata</a>';
-    if (email) html += '<a href="mailto:' + email + '" class="btn">Invia email</a>';
-    if (website) html += '<a href="http://' + website + '" class="btn">Visita sito web</a>';
+    if (email) html += '<a href="mailto:' + email + '" class="btn">Envoyer un email</a>';
+    if (website) html += '<a href="http://' + website + '" class="btn">Visiter le site web</a>';
     return '<div class="">' + html + '</div><br>';
 };
 
