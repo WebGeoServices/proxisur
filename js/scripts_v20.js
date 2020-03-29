@@ -1,14 +1,13 @@
 var woosmapKey = "woos-dac827d8-2486-3f46-99e2-a25338988fdb";
 
 //develop
-//var woosmapKey = "woos-4482c0d1-d5ab-3b1a-acc1-56efd1c94847";
+//var woosmapKey = "woos-501ea2ef-9c41-3e9d-bb8a-e4560ce21381";
 
 var renderInit = function (location) {
   var intialLat = 46.1313871;
   var intialLong = 1;
   var intialZoom = 6;
   if(location) {
-    console.log('location', location)
     intialLat = location.lat;
     intialLong = location.lng;
     intialZoom = 11;
@@ -495,7 +494,6 @@ var renderInit = function (location) {
   var loadStoreLocator = function () {
     var webapp = new WebApp('store-locator', woosmapKey);
     var isMobile = document.querySelector('body').clientWidth < 750;
-
     webapp.setConf(storeLocatorConfig);
 
 
@@ -593,6 +591,14 @@ if (locality) {
     input:locality
   }, response => {
     if(response && response.localities && response.localities.length > 0) {
+      document.title = document.title + ' sur ' + response.localities[0].name;
+      document.getElementById("metatitle1").setAttribute("content", document.getElementById("metatitle1").getAttribute("content") + ' sur ' + response.localities[0].name);
+      document.getElementById("metadesc1").setAttribute("content", document.getElementById("metadesc1").getAttribute("content").replace('à domicile', 'à domicile' + ' sur ' + response.localities[0].name) );
+      document.getElementById("metatitle2").setAttribute("content", document.getElementById("metatitle2").getAttribute("content") + ' sur ' + response.localities[0].name);
+      document.getElementById("metadesc2").setAttribute("content", document.getElementById("metadesc2").getAttribute("content").replace('à domicile', 'à domicile' + ' sur ' + response.localities[0].name) );
+      document.getElementById("metatitle3").setAttribute("content", document.getElementById("metatitle3").getAttribute("content") + ' sur ' + response.localities[0].name);
+      document.getElementById("metadesc3").setAttribute("content", document.getElementById("metadesc3").getAttribute("content").replace('à domicile', 'à domicile' + ' sur ' + response.localities[0].name) );
+      
       renderInit(response.localities[0].location);
     }
     
