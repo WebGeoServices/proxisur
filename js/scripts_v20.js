@@ -47,12 +47,14 @@ switch(path) {
     var intialZoom = 6;
 }
 
+var woosmapKey = "woos-dac827d8-2486-3f46-99e2-a25338988fdb";
+
 var storeLocatorConfig = {
   "theme": {
     "primary_color": "#D81A60"
   },
   "datasource": {
-    "api_key": "woos-dac827d8-2486-3f46-99e2-a25338988fdb",
+    "api_key": woosmapKey,
     "max_responses": 150,
     "max_distance": 20000,
     "use_distance_matrix": false,
@@ -366,41 +368,27 @@ var storeLocatorConfig = {
           "fr": ""
         },
         "choices": [
-          {"key": "habillement","fr": "Habillement"},
-          {"key": "bar","fr": "Bar"},
-          {"key": "kiosque_papeterie","fr": "Kiosque à journaux / papeterie"},
-          {"key": "electronique_telephonie","fr": "Electronique / Téléphonie"},
-          {"key": "pharmacie","fr": "Pharmacie"},
-          {"key": "fleuriste","fr": "Fleuriste"},
-          {"key": "boulangerie","fr": "Boulangerie"},
-          {"key": "alimentation_generale","fr": "Alimentation Générale"},
-          {"key": "loisirs","fr": "Loisirs"},
-          {"key": "hygiene_beaute","fr": "Hygiène et beauté"},
-          {"key": "pressing","fr": "Pressing"},
-          {"key": "optique","fr": "Optique"},
-          {"key": "animalerie","fr": "Animalerie"},
-          {"key": "puericulture","fr": "Puériculture"},
-          {"key": "maison_ameublement","fr": "Maison / Ameublement"},
-          {"key": "restauration","fr": "Restauration"},
-          {"key": "supermarche","fr": "Supermarché"},
-          {"key": "autre","fr": "Autre"}
+          {"key": "Habillement","fr": "Habillement"},
+          {"key": "Bar","fr": "Bar"},
+          {"key": "Kiosque à journaux / papeterie","fr": "Kiosque à journaux/Papeterie"},
+          {"key": "Electronique / Téléphonie","fr": "Electronique/Téléphonie"},
+          {"key": "Pharmacie","fr": "Pharmacie"},
+          {"key": "Fleuriste","fr": "Fleuriste"},
+          {"key": "Boulangerie","fr": "Boulangerie"},
+          {"key": "Alimentation générale","fr": "Alimentation Générale"},
+          {"key": "Loisirs","fr": "Loisirs"},
+          {"key": "Parfumerie","fr": "Parfumerie"},
+          {"key": "Pressing","fr": "Pressing"},
+          {"key": "Optique","fr": "Optique"},
+          {"key": "Animalerie","fr": "Animalerie"},
+          {"key": "Puériculture","fr": "Puériculture"},
+          {"key": "Maison ameublement","fr": "Maison/Ameublement"},
+          {"key": "Restaurants","fr": "Restauration"},
+          {"key": "Supermarché","fr": "Supermarché"},
+          {"key": "Autre","fr": "Autre"}
         ],
         "innerOperator": "or"
-      }/*,
-      {
-        "propertyType": "type",
-        "title": {
-          "it": "Scegli una provincia"
-        },
-        "choices": [
-          {"key": "ferrara","it": "Ferrara"},
-          {"key": "mantova","it": "Mantova"},
-          {"key": "modena","it": "Modena"},
-          {"key": "reggioemilia","it": "Reggio Emilia"},
-          {"key": "rovigo","it": "Rovigo"}
-        ],
-        "innerOperator": "or"
-      } */
+      }
     ],
     "outerOperator": "and"
   }
@@ -416,7 +404,7 @@ const getName = function (store) {
 // Indirizzo
 const getAddress = function (store) {
     let address = store.properties.address.lines;
-    return '<p class="storeInfo getAddress"><strong>Indirizzo</strong><br />' + address + '</p>';
+    return '<p class="storeInfo getAddress"><strong>Adresse</strong><br />' + address + '</p>';
 };
 
 const getAddressNoTitle = function (store) {
@@ -440,13 +428,13 @@ const getContacts = function (store) {
 // Zone
 const getShipsToWhere = function (store) {
     let where = store.properties.user_properties.where;
-    if (where) return '<p class="storeInfo getShipsToWhere"><strong>Quali zone ti rendi disponibile a servire</strong><br />' + where.replace('\n','<br>') + '</p>';
+    if (where) return '<p class="storeInfo getShipsToWhere"><strong>Zones couverte par le service de livraison</strong><br />' + where.replace('\n','<br>') + '</p>';
 };
 
 // Costi
 const getShipsToCost = function (store) {
     let cost = store.properties.user_properties.cost;
-    if (cost) return '<p class="storeInfo getShipsToCost"><strong>Costo</strong><br />' + cost.replace('\n','<br>') + '</p>';
+    if (cost) return '<p class="storeInfo getShipsToCost"><strong>Cout</strong><br />' + cost.replace('\n','<br>') + '</p>';
 };
 
 const tagLabels = {
@@ -493,20 +481,19 @@ const getTagsNoTitle = function (store) {
         }
       }
       tagsHTMLList += '&nbsp;<br>';
-      tagsHTMLList += '<span class="btn">Vedi maggiori informazioni</span></p>';
+      tagsHTMLList += '<span class="btn">Voir plus d\'informations</span></p>';
     }
     return tagsHTMLList;
 };
 
 const getCategories = function (store) {
-    const getCategories = store.properties.types[0];
+    const getCategories = store.properties.tags[0];
     const getOtherCats = store.properties.user_properties.other_cats;
-    // if (getOtherCats) other_cats = '<strong>:</strong> ' + getOtherCats;
-    // return '<p class="storeInfo getCategories">'+getCategories+'</p>'; */
-    if (getCategories == 'Altro') {
-      return '<p class="storeInfo getCategories"><strong>Categoria merceologica</strong><br />'+getCategories+': '+getOtherCats+'</p>';
+    console.log(store);
+    if (getCategories == 'Autre') {
+      return '<p class="storeInfo getCategories"><strong>Categorie de produit</strong><br />'+getCategories+': '+getOtherCats+'</p>';
     } else {
-      return '<p class="storeInfo getCategories"><strong>Categoria merceologica</strong><br />'+getCategories+'</p>';
+      return '<p class="storeInfo getCategories"><strong>Categorie de produit</strong><br />'+getCategories+'</p>';
     }
 };
 
@@ -515,7 +502,7 @@ const getCategoriesNoTitle = function (store) {
     const getOtherCats = store.properties.user_properties.other_cats;
     // if (getOtherCats) other_cats = '<strong>:</strong> ' + getOtherCats;
     // return '<p class="storeInfo getCategories">'+getCategories+'</p>'; */
-    if (getCategories == 'Altro') {
+    if (getCategories == 'Autre') {
       return '<p class="storeInfo getCategoriesNoTitle"><i>'+getCategories+': '+getOtherCats+'</i></p><p class="storeInfo getCategoriesNoTitleBtn"><i>Info &raquo;</i></p>';
     } else {
       return '<p class="storeInfo getCategoriesNoTitle"><i>'+getCategories+'</i></p><p class="storeInfo getCategoriesNoTitleBtn"><i>Info &raquo;</i></p>';
@@ -524,7 +511,7 @@ const getCategoriesNoTitle = function (store) {
 
 const getServices = function (store) {
     const services = store.properties.user_properties.services;
-    if (services) return '<p class="storeInfo getServices"><strong>Quali servizi offri oltre alla consegna a domicilio</strong><br />' + services + '</p>';
+    if (services) return '<p class="storeInfo getServices"><strong>Autres services proposés en plus de la livraison à domicile</strong><br />' + services + '</p>';
 };
 
 const getServicesNoTitle = function (store) {
@@ -540,7 +527,7 @@ const getDistance = function (store) {
 };
 
 var loadStoreLocator = function () {
-  var webapp = new WebApp('store-locator', 'woos-dac827d8-2486-3f46-99e2-a25338988fdb');
+  var webapp = new WebApp('store-locator', woosmapKey);
   var isMobile = document.querySelector('body').clientWidth < 750;
 
   webapp.setConf(storeLocatorConfig);
