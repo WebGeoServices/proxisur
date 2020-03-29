@@ -154,7 +154,7 @@ p {
 
 #header .logo {
     display: block;
-    width: 190px;
+    width: 140px;
 }
 
 #header .logo img {
@@ -498,7 +498,7 @@ p {
 
 .mobileonly .addbtn {
     margin:15px auto 0;
-    width:100%; 
+    width:100%;
 }
 
 .desktoponly.addbtn {
