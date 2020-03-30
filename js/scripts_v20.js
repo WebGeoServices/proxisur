@@ -581,6 +581,9 @@ var renderInit = function (location) {
       $('#header').css({ "height": "", "position": "", "padding-top": "", "padding-bottom": "", "background-color": "", })
     }
   };
+   $('#closeNotice').on('click', function () {
+     $('.notice').hide();
+    });
   fixedMenu();
 }
 
@@ -601,10 +604,10 @@ if (locality) {
       document.getElementById("metadesc2").setAttribute("content", document.getElementById("metadesc2").getAttribute("content").replace('à domicile', 'à domicile' + ' sur ' + response.localities[0].name) );
       document.getElementById("metatitle3").setAttribute("content", document.getElementById("metatitle3").getAttribute("content") + ' sur ' + response.localities[0].name);
       document.getElementById("metadesc3").setAttribute("content", document.getElementById("metadesc3").getAttribute("content").replace('à domicile', 'à domicile' + ' sur ' + response.localities[0].name) );
-      
+
       renderInit(response.localities[0].location);
     }
-    
+
   },
   renderInit
   );
