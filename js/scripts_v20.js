@@ -1,7 +1,7 @@
 var woosmapKey = "woos-dac827d8-2486-3f46-99e2-a25338988fdb";
 
 //develop
-//var woosmapKey = "woos-501ea2ef-9c41-3e9d-bb8a-e4560ce21381";
+//var woosmapKey = "woos-e3431ffa-5a40-3838-a856-38fbc7fa30ae";
 
 var renderInit = function (location) {
   var intialLat = 46.1313871;
@@ -491,13 +491,13 @@ var renderInit = function (location) {
     return '<p class="storeInfo getDistance">' + distance + '</p>';
   };
 
+  const webapp = new WebApp('store-locator', woosmapKey);
   var loadStoreLocator = function () {
-    var webapp = new WebApp('store-locator', woosmapKey);
+    //var webapp = new WebApp('store-locator', woosmapKey);
     var isMobile = document.querySelector('body').clientWidth < 750;
     webapp.setConf(storeLocatorConfig);
-
-
-    webapp.render(isMobile);
+    if (!isMobile) {webapp.render(false);}
+    //webapp.render(isMobile);
 
     webapp.setFullStoreRenderer(function (store) {
       let myCustomContent = document.createElement('ul');
@@ -535,7 +535,6 @@ var renderInit = function (location) {
       return mySummaryContent;
     });
   };
-
 
   if (document.readyState === "complete") {
     loadStoreLocator();
@@ -582,7 +581,12 @@ var renderInit = function (location) {
     }
   };
    $('#closeNotice').on('click', function () {
-     $('.notice').hide();
+     $('.notice').hide(
+         function(){
+            var isMobile = document.querySelector('body').clientWidth < 750;
+            webapp.render(isMobile);
+         }
+     );
     });
   fixedMenu();
 }
