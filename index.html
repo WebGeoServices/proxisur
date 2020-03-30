@@ -64,7 +64,7 @@
 
     <!-- STYLESHEET -->
     <link rel="stylesheet" href="./css/bs.css">
-    <link rel="stylesheet" href="./css/style_v3.css">
+    <link rel="stylesheet" href="./css/style_v3.css?v=3">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://webapp.woosmap.com/webapp.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBN8I1KsGyHdCkDEHY0G4-m6wZBzVwVVr0"></script>
@@ -119,25 +119,26 @@
     <!-- header -->
 
     <div class="map">
-        <div id="store-locator" class="map-holder"></div>
-    </div>
-    <div class="notice">
-        <div class="container-notice">
-            <div class="notice-image">
-                <img src="images/notice.png"></div>
-            <div class="notice-content"><h2>Livraison à domicile
-            </h2>
-                <p>Explorez les activités
-                    <mark>autour de chez vous</mark>
-                    qui effectuent les livraisons à domicile:
-                    boutiques, bars, restaurants, papeteries, laveries et plus encore.
-                </p>
-                <div class="notice-button">
-                    <div id="closeNotice" class="button">Je Découvre</div>
+        <div class="main notice">
+            <div class="container-notice container-fluid">
+                <div class="notice-image">
+                    <img src="images/notice.png"></div>
+                <div class="notice-content"><h2>Livraison à domicile
+                </h2>
+                    <p>Explorez les activités
+                        <span class="mark">autour de chez vous</span>
+                        qui effectuent les livraisons à domicile:
+                        boutiques, bars, restaurants, papeteries, laveries et plus encore.
+                    </p>
+                    <div class="notice-button">
+                        <div id="closeNotice" class="button">J'ai compris</div>
+                    </div>
                 </div>
             </div>
         </div>
+        <div id="store-locator" class="map-holder"></div>
     </div>
+
     <!-- footer -->
     <!-- footer id="footer">
         <div class="container-fluid">
@@ -152,7 +153,7 @@
     </footer -->
 </div>
 <script src="https://sdk.woosmap.com/localities/localities.js"></script>
-<script type="text/javascript" src="./js/scripts_v20.js"></script>
+<script type="text/javascript" src="./js/scripts_v20.js?v=1"></script>
 </body>
 
 </html>
