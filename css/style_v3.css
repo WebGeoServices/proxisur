@@ -199,6 +199,7 @@ p {
     -ms-flex-positive: 1;
     /* flex-grow: 1; */
     height: 100%;
+    overflow-y: auto;
     position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
