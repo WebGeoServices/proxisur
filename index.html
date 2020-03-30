@@ -10,6 +10,7 @@
         function gtag() {
             dataLayer.push(arguments);
         }
+
         gtag('js', new Date());
 
         gtag('config', 'UA-162087636-1');
@@ -22,14 +23,16 @@
 
     <title>Proxisur</title>
     <meta name="title" id="metatitle1" content="Proxisur - Livraison à domicile">
-    <meta name="description" id="metadesc1" content="La carte des magasins qui offrent un service de livraison à domicile. Pour combattre l'urgence face au Coronavirus nous devons rester à distance les uns des autres mais pas distant.">
+    <meta name="description" id="metadesc1"
+          content="La carte des magasins qui offrent un service de livraison à domicile. Pour combattre l'urgence face au Coronavirus nous devons rester à distance les uns des autres mais pas distant.">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://proxisur.fr">
 
     <meta property="og:title" id="metatitle2" content="Proxisur - Livraison à domicile">
-    <meta property="og:description" id="metadesc2" content="La carte des magasins qui offrent un service de livraison à domicile. Pour combattre l'urgence face au Coronavirus nous devons rester à distance les uns des autres mais pas distant.">
+    <meta property="og:description" id="metadesc2"
+          content="La carte des magasins qui offrent un service de livraison à domicile. Pour combattre l'urgence face au Coronavirus nous devons rester à distance les uns des autres mais pas distant.">
     <meta property="og:image" content="https://www.proxisur.fr/images/proxisur_social.png">
 
     <!-- Twitter -->
@@ -37,7 +40,8 @@
     <meta property="twitter:url" content="https://proxisur.fr">
 
     <meta property="twitter:title" id="metatitle3" content="Proxisur - Livraison à domicile">
-    <meta property="twitter:description" id="metadesc3" content="La carte des magasins qui offrent un service de livraison à domicile. Pour combattre l'urgence face au Coronavirus nous devons rester à distance les uns des autres mais pas distant.">
+    <meta property="twitter:description" id="metadesc3"
+          content="La carte des magasins qui offrent un service de livraison à domicile. Pour combattre l'urgence face au Coronavirus nous devons rester à distance les uns des autres mais pas distant.">
     <meta property="twitter:image" content="https://www.proxisur.fr/images/proxisur_social.png">
 
     <link rel="apple-touch-icon" sizes="57x57" href="/images/favicon/apple-icon-57x57.png">
@@ -60,7 +64,7 @@
 
     <!-- STYLESHEET -->
     <link rel="stylesheet" href="./css/bs.css">
-    <link rel="stylesheet" href="./css/style_v3.css">
+    <link rel="stylesheet" href="./css/style_v3.css?v=4">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://webapp.woosmap.com/webapp.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBN8I1KsGyHdCkDEHY0G4-m6wZBzVwVVr0"></script>
@@ -69,61 +73,89 @@
 
 <body>
 
-    <div class="wrap">
-        <header id="header">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-6">
-                        <strong class="logo"><a href="/"><img src="./images/logo_header.png" alt="Vicinoesicuro"></a></strong>
-                    </div>
-                    <div class="col-6 alignright">
-                        <a href="https://docs.google.com/forms/d/e/1FAIpQLScjZ17Qnd6WUsoW0EELF9wANbregKOdFDtw2VhFTAyzY2bLTA/viewform" target="_blank" class="addbtn desktoponly">Inscrire un magasin</a>
-                        <nav class="menu">
-                            <ul class="header-menu">
-                                <li><a href="/">Carte</a></li>
-                                <li><a href="https://docs.google.com/forms/d/e/1FAIpQLScjZ17Qnd6WUsoW0EELF9wANbregKOdFDtw2VhFTAyzY2bLTA/viewform" target="_blank">Inscrire un magasin</a></li>
-                                <li><a href="/about.html">Infos sur le projet</a></li>
-                                <li><a href="contact.html">Contact</a></li>
-                                <li><a href="https://www.facebook.com/vicinoesicuro/">Suivre sur Facebook</a></li>
-                                <li><a href="https://www.iubenda.com/privacy-policy/30287331" target="_blank">Privacy et Cookie Policy</a></li>
-                                <li class="credits"><strong>Proxisur</strong> est un projet né en italie au début du confinement à Reggio Emilia, et relayé en France<br />Powered by <a href="https://www.woosmap.com/" target="_blank">Woosmap</a></li>
-                            </ul>
-                            <div class="dropdown-btn">
-                                <a href="#">
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                </a>
-                            </div>
-                        </nav>
-                    </div>
-                    <div class="col-12 mobileonly">
-                        <a href="https://docs.google.com/forms/d/e/1FAIpQLScjZ17Qnd6WUsoW0EELF9wANbregKOdFDtw2VhFTAyzY2bLTA/viewform" target="_blank" class="addbtn">Inscrire un magasin</a>
-                    </div>
+<div class="wrap">
+    <header id="header">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-6">
+                    <strong class="logo"><a href="/"><img src="./images/logo_header.png"
+                                                          alt="Vicinoesicuro"></a></strong>
+                </div>
+                <div class="col-6 alignright">
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLScjZ17Qnd6WUsoW0EELF9wANbregKOdFDtw2VhFTAyzY2bLTA/viewform"
+                       target="_blank" class="addbtn desktoponly">Inscrire un magasin</a>
+                    <nav class="menu">
+                        <ul class="header-menu">
+                            <li><a href="/">Carte</a></li>
+                            <li>
+                                <a href="https://docs.google.com/forms/d/e/1FAIpQLScjZ17Qnd6WUsoW0EELF9wANbregKOdFDtw2VhFTAyzY2bLTA/viewform"
+                                   target="_blank">Inscrire un magasin</a></li>
+                            <li><a href="/about.html">Infos sur le projet</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="https://www.facebook.com/vicinoesicuro/">Suivre sur Facebook</a></li>
+                            <li><a href="https://www.iubenda.com/privacy-policy/30287331" target="_blank">Privacy et
+                                Cookie Policy</a></li>
+                            <li class="credits"><strong>Proxisur</strong> est un projet né en italie au début du
+                                confinement à Reggio Emilia, et relayé en France<br/>Powered by <a
+                                        href="https://www.woosmap.com/" target="_blank">Woosmap</a></li>
+                        </ul>
+                        <div class="dropdown-btn">
+                            <a href="#">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </a>
+                        </div>
+                    </nav>
+                </div>
+                <div class="col-12 mobileonly">
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLScjZ17Qnd6WUsoW0EELF9wANbregKOdFDtw2VhFTAyzY2bLTA/viewform"
+                       target="_blank" class="addbtn">Inscrire un magasin</a>
                 </div>
             </div>
-            <!-- container-fluid -->
-        </header>
-        <!-- header -->
-
-        <div class="map">
-            <div id="store-locator" class="map-holder"></div>
         </div>
-        <!-- footer -->
-        <!-- footer id="footer">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-12">
-                        <p class="footer-copy">
-                            <strong>Vicino<span style="color:#D81A60;">e</span>sicuro</strong> è un progetto nato a Reggio Emilia - Powered by <a href="https://www.woosmap.com/" target="_blank">Woosmap</a> - <a href="https://www.iubenda.com/privacy-policy/30287331" target="_blank">Privacy e Cookie Policy</a>
-                        </p>
+        <!-- container-fluid -->
+    </header>
+    <!-- header -->
+
+    <div class="map">
+        <div class="main notice">
+            <div class="container-notice container-fluid">
+                <div class="notice-image">
+                    <img src="images/notice.png"></div>
+                <div class="notice-content"><h2>Livraison à domicile ou click&collect
+                </h2>
+                    <p>Explorez les activités
+                        <span class="mark">autour de chez vous</span>
+                        qui effectuent les livraisons à domicile ou des click&collect: épiceries, supermarchés, restaurants, bars, papeteries, laveries et plus encore.
+                    </p>
+                    <p><span class="mark">Aidez nous</span> en renseignant les commerces de votre quartier avec le  <a href="https://docs.google.com/forms/d/e/1FAIpQLScjZ17Qnd6WUsoW0EELF9wANbregKOdFDtw2VhFTAyzY2bLTA/viewform"
+                       target="_blank">formulaire</a>!
+                    </p>
+                    <div class="notice-button">
+                        <div id="closeNotice" class="button">OK, j'ai compris</div>
                     </div>
                 </div>
             </div>
-        </footer -->
+        </div>
+        <div id="store-locator" class="map-holder"></div>
     </div>
-    <script src="https://sdk.woosmap.com/localities/localities.js"></script>
-    <script type="text/javascript" src="./js/scripts_v20.js"></script>
+
+    <!-- footer -->
+    <!-- footer id="footer">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <p class="footer-copy">
+                        <strong>Vicino<span style="color:#D81A60;">e</span>sicuro</strong> è un progetto nato a Reggio Emilia - Powered by <a href="https://www.woosmap.com/" target="_blank">Woosmap</a> - <a href="https://www.iubenda.com/privacy-policy/30287331" target="_blank">Privacy e Cookie Policy</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer -->
+</div>
+<script src="https://sdk.woosmap.com/localities/localities.js"></script>
+<script type="text/javascript" src="./js/scripts_v20.js?v=1"></script>
 </body>
 
 </html>
