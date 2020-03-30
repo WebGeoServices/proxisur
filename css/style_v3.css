@@ -1136,6 +1136,7 @@ p {
 .notice {
     background: #D81A60;
     color: white;
+    padding-bottom: 1.2em;
 }
 
 h1 {

@@ -595,11 +595,12 @@ var renderInit = function (location) {
         }
     };
     fixedMenu();
-}
+};
 
-var autocompleteService = new woosmap.localities.AutocompleteService(woosmapKey);
-var locality = window.location.hash.substr(1);
+var locality = location.search.split('city=')[1];
+console.log(locality);
 if (locality) {
+    var autocompleteService = new woosmap.localities.AutocompleteService(woosmapKey);
     autocompleteService.getQueryPredictions({
             input: locality,
             components: {
