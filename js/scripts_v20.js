@@ -1,7 +1,7 @@
 var woosmapKey = "woos-dac827d8-2486-3f46-99e2-a25338988fdb";
 
 //develop
-//var woosmapKey = "woos-501ea2ef-9c41-3e9d-bb8a-e4560ce21381";
+//var woosmapKey = "woos-e3431ffa-5a40-3838-a856-38fbc7fa30ae";
 
 var renderInit = function (location) {
   var intialLat = 46.1313871;
@@ -386,7 +386,7 @@ var renderInit = function (location) {
     // html += getPhone(store);
     if (phone) html += '<a href="tel:' + phone + '" class="btn">Téléphone</a>';
     if (email) html += '<a href="mailto:' + email + '" class="btn">Envoyer un email</a>';
-    if (website) html += '<a href="http://' + website + '" class="btn">Visiter le site web</a>';
+    if (website) html += '<a href="' + website + '" class="btn">Visiter le site web</a>';
     return '<div class="">' + html + '</div><br>';
   };
 
