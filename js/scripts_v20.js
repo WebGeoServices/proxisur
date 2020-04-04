@@ -47,13 +47,18 @@ var renderInit = function (location) {
       "api_key": "AIzaSyBN8I1KsGyHdCkDEHY0G4-m6wZBzVwVVr0",
       "geocoder": { "region": "fr" },
       "disableDirections": true,
-      "localities": {
+      "places": {
+            "types": ["geocode"],
+            "componentRestrictions": {"country": "fr"}
+        },
+        "minLength": 3,
+      /*"localities": {
         "language": "fr",
         "componentRestrictions": {
           "country": ["fr"]
         },
         "types": ["locality", "postal_code"],
-      },
+      },*/
     },
     "woosmapview": {
       "initialCenter": {
