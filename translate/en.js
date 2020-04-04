@@ -27,6 +27,13 @@ var translations = {
 "<p><strong>Close and Safe: satying safe at home does not mean being far from merchants.</strong></p>\n",
 "meta-title": "NearbyAndSafe - Home delivery or click&collect",
 "meta-description":"The map of nearby stores which offer an home delivery service or drive. To fight again the Coronasvirus we have to stay away from each other but not distant",
-"meta-image":"https://www.proxisur.fr/images/proxisur_social.png"
+"meta-image":"https://www.proxisur.fr/images/proxisur_social.png",
+"phone": "Phone",
+"send-mail":"Send an Email",
+"website": "Visit the Website",
+"area": "Available delivery areas",
+"cost": "Cost",
+"category": "Product Category",
+"other-services": "Other services"
 };
 jsI18n.addLocale("en", translations);

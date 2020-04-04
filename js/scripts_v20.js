@@ -2,14 +2,19 @@
 //var woosmapKey = "woos-dac827d8-2486-3f46-99e2-a25338988fdb";
 
 //UK
-//var woosmapKey="woos-d7e23af4-a101-38b8-bd8d-0645ed79b46b"
+var woosmapKey="woos-d7e23af4-a101-38b8-bd8d-0645ed79b46b"
 
 //develop
 //var woosmapKey = "woos-e3431ffa-5a40-3838-a856-38fbc7fa30ae";
 //develop UK
-var woosmapKey = "woos-873b24c3-5e0a-3f3c-b088-5af8dd54460f";
+//var woosmapKey = "woos-873b24c3-5e0a-3f3c-b088-5af8dd54460f";
 
 var renderInit = function (location) {
+  if (window.location.hostname === "localhost"){jsI18n.setLocale("en");}
+        else if (window.location.hostname === "www.closeandsafe.com" || window.location.hostname === "www.nearbyandsafe.com"){jsI18n.setLocale("en");}
+        else if (window.location.hostname === "www.proxisur.fr"){jsI18n.setLocale("fr");}
+        else {jsI18n.setLocale("en");}
+
   var intialLat = 46.1313871;
   var intialLong = 1;
   var intialZoom = 6;
@@ -33,7 +38,7 @@ var renderInit = function (location) {
       "useRecommendation": false
     },
     "internationalization": {
-      "lang": "fr",
+      "lang": jsI18n.locale,
       "unitSystem": 0,
       "customTranslations": {
         "it": {
@@ -51,15 +56,20 @@ var renderInit = function (location) {
     "maps": {
       "provider": "google",
       "api_key": "AIzaSyBN8I1KsGyHdCkDEHY0G4-m6wZBzVwVVr0",
-      "geocoder": { "region": "fr" },
+      "geocoder": { "region": jsI18n.locale },
       "disableDirections": true,
-      "localities": {
-        "language": "fr",
+      "places": {
+            "types": ["geocode"],
+            "componentRestrictions": {"country": "gb"}
+        },
+        "minLength": 3,
+      /*"localities": {
+        "language": jsI18n.locale,
         "componentRestrictions": {
-          "country": ["fr"]
+          "country": [jsI18n.locale]
         },
         "types": ["locality", "postal_code"],
-      },
+      },*/
     },
     "woosmapview": {
       "initialCenter": {
@@ -336,27 +346,28 @@ var renderInit = function (location) {
         {
           "propertyType": "tag",
           "title": {
-            "fr": ""
+            "fr": "",
+            "en": ""
           },
           "choices": [
-            { "key": "Habillement", "fr": "Habillement" },
-            { "key": "Bar", "fr": "Bar" },
-            { "key": "Kiosque à journaux / papeterie", "fr": "Kiosque à journaux/Papeterie" },
-            { "key": "Electronique / Téléphonie", "fr": "Electronique/Téléphonie" },
-            { "key": "Pharmacie", "fr": "Pharmacie" },
-            { "key": "Fleuriste", "fr": "Fleuriste" },
-            { "key": "Boulangerie", "fr": "Boulangerie" },
-            { "key": "Alimentation générale", "fr": "Alimentation Générale" },
-            { "key": "Loisirs", "fr": "Loisirs" },
-            { "key": "Parfumerie", "fr": "Parfumerie" },
-            { "key": "Pressing", "fr": "Pressing" },
-            { "key": "Optique", "fr": "Optique" },
-            { "key": "Animalerie", "fr": "Animalerie" },
-            { "key": "Puériculture", "fr": "Puériculture" },
-            { "key": "Maison ameublement", "fr": "Maison/Ameublement" },
-            { "key": "Restaurants", "fr": "Restauration" },
-            { "key": "Supermarché", "fr": "Supermarché" },
-            { "key": "Autre", "fr": "Autre" }
+            { "key": "Habillement", "fr": "Habillement", "en": "Clothes" },
+            { "key": "Bar", "fr": "Bar", "en": "Bar" },
+            { "key": "Kiosque à journaux / papeterie", "fr": "Kiosque à journaux/Papeterie", "en":"Newsstand" },
+            { "key": "Electronique / Téléphonie", "fr": "Electronique/Téléphonie", "en": "Phone/Electronic" },
+            { "key": "Pharmacie", "fr": "Pharmacie", "en": "Pharmacy" },
+            { "key": "Fleuriste", "fr": "Fleuriste", "en": "Florist" },
+            { "key": "Boulangerie", "fr": "Boulangerie", "en": "Bakery" },
+            { "key": "Alimentation générale", "fr": "Alimentation Générale", "en": "Grocery" },
+            { "key": "Loisirs", "fr": "Loisirs", "en": "Hobbies" },
+            { "key": "Parfumerie", "fr": "Parfumerie", "en": "Perfumery" },
+            { "key": "Pressing", "fr": "Pressing" , "en": "Pressing"},
+            { "key": "Optique", "fr": "Optique" , "en": "Optic"},
+            { "key": "Animalerie", "fr": "Animalerie", "en": "Pet Shop" },
+            { "key": "Puériculture", "fr": "Puériculture", "en": "Childcare" },
+            { "key": "Maison ameublement", "fr": "Maison/Ameublement", "en": "House" },
+            { "key": "Restaurants", "fr": "Restauration", "en": "Restaurants" },
+            { "key": "Supermarché", "fr": "Supermarché", "en": "Supermarket" },
+            { "key": "Autre", "fr": "Autre", "en": "Other" }
           ],
           "innerOperator": "or"
         }
@@ -390,80 +401,31 @@ var renderInit = function (location) {
     let website = store.properties.contact.website;
     let html = "";
     // html += getPhone(store);
-    if (phone) html += '<a href="tel:' + phone + '" class="btn">Téléphone</a>';
-    if (email) html += '<a href="mailto:' + email + '" class="btn">Envoyer un email</a>';
-    if (website) html += '<a href="' + website + '" class="btn">Visiter le site web</a>';
+    if (phone) html += '<a href="tel:' + phone + '" class="btn">'+jsI18n.t("phone")+'</a>';
+    if (email) html += '<a href="mailto:' + email + '" class="btn">'+jsI18n.t("send-mail")+'</a>';
+    if (website) html += '<a href="' + website + '" class="btn">'+jsI18n.t("website")+'</a>';
     return '<div class="">' + html + '</div><br>';
   };
 
   // Zone
   const getShipsToWhere = function (store) {
     let where = store.properties.user_properties.where;
-    if (where) return '<p class="storeInfo getShipsToWhere"><strong>Zones couverte par le service de livraison</strong><br />' + where.replace('\n', '<br>') + '</p>';
+    if (where) return '<p class="storeInfo getShipsToWhere"><strong>'+jsI18n.t("area")+'</strong><br />' + where.replace('\n', '<br>') + '</p>';
   };
 
   // Costi
   const getShipsToCost = function (store) {
     let cost = store.properties.user_properties.cost;
-    if (cost) return '<p class="storeInfo getShipsToCost"><strong>Cout</strong><br />' + cost.replace('\n', '<br>') + '</p>';
-  };
-
-  const tagLabels = {
-    "habillement": "Habillement",
-    "bar": "Bar",
-    "kiosque_papeterie": "Kiosque à journaux / papeterie",
-    "electronique_telephonie": "Electronique / Téléphonie",
-    "pharmacie": "Pharmacie",
-    "fleuriste": "Fleuriste",
-    "boulangerie": "Boulangerie",
-    "alimentation_generale": "Alimentation Générale",
-    "loisirs": "Loisirs",
-    "hygiene_beaute": "Hygiène et beauté",
-    "pressing": "Pressing",
-    "optique": "Optique",
-    "animalerie": "Animalerie",
-    "puericulture": "Puériculture",
-    "maison_ameublement": "Maison / Ameublement",
-    "restauration": "Restauration",
-    "supermarche": "Supermarché",
-    "autre": "Autre"
-  };
-  const getTags = function (store) {
-    let tagsHTMLList = '';
-    if (store.properties && store.properties.tags.length > 0) {
-      tagsHTMLList = '<p class="storeInfo getTags"><strong>Categorie merceologiche</strong><br />';
-      for (let tag in store.properties.tags) {
-        if (tagLabels[store.properties.tags[tag]]) {
-          tagsHTMLList += '<span>' + tagLabels[store.properties.tags[tag]] + '</span><br>';
-        }
-      }
-      tagsHTMLList += '&nbsp;</p>';
-    }
-    return tagsHTMLList;
-  };
-
-  const getTagsNoTitle = function (store) {
-    let tagsHTMLList = '';
-    if (store.properties && store.properties.tags.length > 0) {
-      tagsHTMLList = '<p class="storeInfo getTagsNoTitle">';
-      for (let tag in store.properties.tags) {
-        if (tagLabels[store.properties.tags[tag]]) {
-          tagsHTMLList += '<span>' + tagLabels[store.properties.tags[tag]] + '</span><br>';
-        }
-      }
-      tagsHTMLList += '&nbsp;<br>';
-      tagsHTMLList += '<span class="btn">Voir plus d\'informations</span></p>';
-    }
-    return tagsHTMLList;
+    if (cost) return '<p class="storeInfo getShipsToCost"><strong>'+jsI18n.t("cost")+'</strong><br />' + cost.replace('\n', '<br>') + '</p>';
   };
 
   const getCategories = function (store) {
     const getCategories = store.properties.tags[0];
     const getOtherCats = store.properties.user_properties.other_cats;
     if (getCategories == 'Autre') {
-      return '<p class="storeInfo getCategories"><strong>Categorie de produit</strong><br />' + getCategories + ': ' + getOtherCats + '</p>';
+      return '<p class="storeInfo getCategories"><strong>'+jsI18n.t("category")+'</strong><br />' + getCategories + ': ' + getOtherCats + '</p>';
     } else {
-      return '<p class="storeInfo getCategories"><strong>Categorie de produit</strong><br />' + getCategories + '</p>';
+      return '<p class="storeInfo getCategories"><strong>'+jsI18n.t("category")+'</strong><br />' + getCategories + '</p>';
     }
   };
 
@@ -481,7 +443,7 @@ var renderInit = function (location) {
 
   const getServices = function (store) {
     const services = store.properties.user_properties.services;
-    if (services) return '<p class="storeInfo getServices"><strong>Autres services proposés en plus de la livraison à domicile</strong><br />' + services + '</p>';
+    if (services) return '<p class="storeInfo getServices"><strong>'+jsI18n.t("other-services")+'</strong><br />' + services + '</p>';
   };
 
   const getServicesNoTitle = function (store) {
@@ -583,3 +545,55 @@ if (locality) {
 } else {
   renderInit()
 }
+
+
+
+
+  /*const tagLabels = {
+    "habillement": "Habillement",
+    "bar": "Bar",
+    "kiosque_papeterie": "Kiosque à journaux / papeterie",
+    "electronique_telephonie": "Electronique / Téléphonie",
+    "pharmacie": "Pharmacie",
+    "fleuriste": "Fleuriste",
+    "boulangerie": "Boulangerie",
+    "alimentation_generale": "Alimentation Générale",
+    "loisirs": "Loisirs",
+    "hygiene_beaute": "Hygiène et beauté",
+    "pressing": "Pressing",
+    "optique": "Optique",
+    "animalerie": "Animalerie",
+    "puericulture": "Puériculture",
+    "maison_ameublement": "Maison / Ameublement",
+    "restauration": "Restauration",
+    "supermarche": "Supermarché",
+    "autre": "Autre"
+  };
+  const getTags = function (store) {
+    let tagsHTMLList = '';
+    if (store.properties && store.properties.tags.length > 0) {
+      tagsHTMLList = '<p class="storeInfo getTags"><strong>Categorie merceologiche</strong><br />';
+      for (let tag in store.properties.tags) {
+        if (tagLabels[store.properties.tags[tag]]) {
+          tagsHTMLList += '<span>' + tagLabels[store.properties.tags[tag]] + '</span><br>';
+        }
+      }
+      tagsHTMLList += '&nbsp;</p>';
+    }
+    return tagsHTMLList;
+  };
+
+  const getTagsNoTitle = function (store) {
+    let tagsHTMLList = '';
+    if (store.properties && store.properties.tags.length > 0) {
+      tagsHTMLList = '<p class="storeInfo getTagsNoTitle">';
+      for (let tag in store.properties.tags) {
+        if (tagLabels[store.properties.tags[tag]]) {
+          tagsHTMLList += '<span>' + tagLabels[store.properties.tags[tag]] + '</span><br>';
+        }
+      }
+      tagsHTMLList += '&nbsp;<br>';
+      tagsHTMLList += '<span class="btn">Voir plus d\'informations</span></p>';
+    }
+    return tagsHTMLList;
+  };*/

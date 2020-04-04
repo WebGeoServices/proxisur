@@ -26,6 +26,13 @@ var translations = {
         "<p><strong>Proxi et Sûr: rester à la bonne distance des autres ne signifie pas être loin du monde.</strong></p>\n",
     "meta-title": "Proxisur - Livraison à domicile ou click&collect",
     "meta-description":"La carte des magasins de proximité qui offrent un service de livraison à domicile ou en drive.",
-    "meta-image":"https://www.proxisur.fr/images/proxisur_social.png"
+    "meta-image":"https://www.proxisur.fr/images/proxisur_social.png",
+    "phone": "Téléphone",
+    "send-mail":"Envoyer un email",
+    "website": "Visiter le site web",
+    "area": "Zones couverte par le service de livraison",
+    "cost": "Cout",
+    "category": "Categorie de produit",
+    "other-services": "Autres services proposés en plus de la livraison à domicile"
 };
 jsI18n.addLocale("fr", translations);
