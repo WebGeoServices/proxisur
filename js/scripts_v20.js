@@ -1,7 +1,13 @@
-var woosmapKey = "woos-dac827d8-2486-3f46-99e2-a25338988fdb";
+//french
+//var woosmapKey = "woos-dac827d8-2486-3f46-99e2-a25338988fdb";
+
+//UK
+var woosmapKey="woos-d7e23af4-a101-38b8-bd8d-0645ed79b46b"
 
 //develop
 //var woosmapKey = "woos-e3431ffa-5a40-3838-a856-38fbc7fa30ae";
+//develop UK
+//var woosmapKey = "woos-873b24c3-5e0a-3f3c-b088-5af8dd54460f"
 
 var renderInit = function (location) {
   var intialLat = 46.1313871;
@@ -454,7 +460,6 @@ var renderInit = function (location) {
   const getCategories = function (store) {
     const getCategories = store.properties.tags[0];
     const getOtherCats = store.properties.user_properties.other_cats;
-    console.log(store);
     if (getCategories == 'Autre') {
       return '<p class="storeInfo getCategories"><strong>Categorie de produit</strong><br />' + getCategories + ': ' + getOtherCats + '</p>';
     } else {
@@ -549,42 +554,6 @@ var renderInit = function (location) {
     window.attachEvent("onload", loadStoreLocator);
   }
 
-  function openMenu() {
-    $('.dropdown-btn').on('click', function () {
-      $(this).toggleClass('active');
-      $('.header-menu').toggleClass('active');
-      $('body').toggleClass('lock');
-    });
-  };
-  openMenu()
-
-  function changeLang() {
-    $('.lang').on('click', function () {
-      $('.lang').not($(this)).removeClass('active');
-      $(this).addClass('active');
-    })
-  };
-  changeLang()
-
-  function changeHeaderMenu() {
-    $('.header-menu > li').on('click', function () {
-      $('.header-menu > li').not($(this)).removeClass('active');
-      $(this).addClass('active');
-    })
-  };
-  changeHeaderMenu();
-
-  function fixedMenu() {
-    if (window.scrollY > 10 && window.innerWidth < 767) {
-      $('#header').css({ "position": "fixed", "padding-top": "25px", "padding-bottom": "10px", "background-color": "#333333", })
-    } else {
-      $('#header').css({ "height": "", "position": "", "padding-top": "", "padding-bottom": "", "background-color": "", })
-    }
-  };
-   $('#closeNotice').on('click', function () {
-     $('.notice').hide();
-    });
-  fixedMenu();
 }
 
 var autocompleteService = new woosmap.localities.AutocompleteService(woosmapKey);

@@ -66,12 +66,34 @@
     <link rel="stylesheet" href="./css/bs.css">
     <link rel="stylesheet" href="./css/style_v3.css?v=4">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
     <script type="text/javascript" src="https://webapp.woosmap.com/webapp.js"></script>
+    <script src="https://sdk.woosmap.com/localities/localities.js"></script>
+    <script type="text/javascript" src="./js/scripts_v20.js?v=1"></script>
+    <script type="text/javascript" src="./js/menu.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBN8I1KsGyHdCkDEHY0G4-m6wZBzVwVVr0"></script>
+
+    <script type="text/javascript" src="./js/jsi18n.js"></script>
+    <script type="text/javascript" src="./translate/en.js"></script>
+    <script type="text/javascript">
+        if (window.location.hostname === "localhost"){jsI18n.setLocale("en");}
+        else if (window.location.hostname === "www.closeandsafe.com"){jsI18n.setLocale("en");}
+        else if (window.location.hostname === "www.proxisur.fr"){jsI18n.setLocale("fr");}
+        else {jsI18n.setLocale("fr");}
+        //jsI18n.processPage();
+        about_page = function() {window.location.replace(jsI18n.t('about-url'));}
+        contact_page = function() {window.location.replace(jsI18n.t('contact-url'));}
+        form_page = function() {window.location.replace(jsI18n.t('form-url'));}
+
+        var init=function(){
+            initMenu();
+            jsI18n.processPage();
+        }
+    </script>
 
 </head>
 
-<body>
+<body onload="init()">
 
 <div class="wrap">
     <header id="header">
@@ -83,19 +105,19 @@
                 </div>
                 <div class="col-6 alignright">
                     <a href="https://docs.google.com/forms/d/e/1FAIpQLScjZ17Qnd6WUsoW0EELF9wANbregKOdFDtw2VhFTAyzY2bLTA/viewform"
-                       target="_blank" class="addbtn desktoponly">Inscrire un magasin</a>
+                       target="_blank" class="addbtn desktoponly" data-trans="new-store">Inscrire un magasin</a>
                     <nav class="menu">
                         <ul class="header-menu">
-                            <li><a href="/">Carte</a></li>
+                            <li><a href="/" data-trans="map">Carte</a></li>
                             <li>
-                                <a href="https://docs.google.com/forms/d/e/1FAIpQLScjZ17Qnd6WUsoW0EELF9wANbregKOdFDtw2VhFTAyzY2bLTA/viewform"
-                                   target="_blank">Inscrire un magasin</a></li>
-                            <li><a href="/about.html">Infos sur le projet</a></li>
-                            <li><a href="contact.html">Contact</a></li>
-                            <li><a href="https://www.facebook.com/vicinoesicuro/">Suivre sur Facebook</a></li>
+                                <a href="javascript:" onclick="form_page()"
+                                   target="_blank" data-trans="new-store">Inscrire un magasin</a></li>
+                            <li><a href="javascript:" onclick="about_page();" data-trans="about-project">Infos sur le projet</a></li>
+                            <li><a href="javascript:" onclick="contact_page()" data-trans="contact">Contact</a></li>
+                            <li><a href="https://www.facebook.com/vicinoesicuro/" data-trans="follow-fb">Suivre sur Facebook</a></li>
                             <li><a href="https://www.iubenda.com/privacy-policy/30287331" target="_blank">Privacy et
                                 Cookie Policy</a></li>
-                            <li class="credits"><strong>Proxisur</strong> est un projet né en italie au début du
+                            <li class="credits" data-trans="credits"><strong>Proxisur</strong> est un projet né en italie au début du
                                 confinement à Reggio Emilia, et relayé en France<br/>Powered by <a
                                         href="https://www.woosmap.com/" target="_blank">Woosmap</a></li>
                         </ul>
@@ -110,7 +132,7 @@
                 </div>
                 <div class="col-12 mobileonly">
                     <a href="https://docs.google.com/forms/d/e/1FAIpQLScjZ17Qnd6WUsoW0EELF9wANbregKOdFDtw2VhFTAyzY2bLTA/viewform"
-                       target="_blank" class="addbtn">Inscrire un magasin</a>
+                       target="_blank" class="addbtn" data-trans="new-store">Inscrire un magasin</a>
                 </div>
             </div>
         </div>
@@ -123,17 +145,17 @@
             <div class="container-notice container-fluid">
                 <div class="notice-image">
                     <img src="images/notice.png"></div>
-                <div class="notice-content"><h2>Livraison à domicile ou click&collect
-                </h2>
-                    <p>Explorez les activités
+                <div class="notice-content">
+                    <h2 data-trans="home-delivery">Livraison à domicile ou click&collect</h2>
+                    <p data-trans="explore-around-you">Explorez les activités
                         <span class="mark">autour de chez vous</span>
                         qui effectuent les livraisons à domicile ou des click&collect: épiceries, supermarchés, restaurants, bars, papeteries, laveries et plus encore.
                     </p>
-                    <p><span class="mark">Aidez nous</span> en renseignant les commerces de votre quartier avec le  <a href="https://docs.google.com/forms/d/e/1FAIpQLScjZ17Qnd6WUsoW0EELF9wANbregKOdFDtw2VhFTAyzY2bLTA/viewform"
+                    <p data-trans="help-us"><span class="mark">Aidez nous</span> en renseignant les commerces de votre quartier avec le  <a href="https://docs.google.com/forms/d/e/1FAIpQLScjZ17Qnd6WUsoW0EELF9wANbregKOdFDtw2VhFTAyzY2bLTA/viewform"
                        target="_blank">formulaire</a>!
                     </p>
                     <div class="notice-button">
-                        <div id="closeNotice" class="button">OK, j'ai compris</div>
+                        <div id="closeNotice" class="button" data-trans="ok-understood">OK, j'ai compris</div>
                     </div>
                 </div>
             </div>
@@ -154,8 +176,7 @@
         </div>
     </footer -->
 </div>
-<script src="https://sdk.woosmap.com/localities/localities.js"></script>
-<script type="text/javascript" src="./js/scripts_v20.js?v=1"></script>
+
 </body>
 
 </html>

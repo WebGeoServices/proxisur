@@ -61,67 +61,90 @@
     <link rel="stylesheet" href="./css/style_v3.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
+    <script type="text/javascript" src="./js/menu.js"></script>
+
+    <script type="text/javascript" src="./js/jsi18n.js"></script>
+    <script type="text/javascript" src="./translate/en.js"></script>
+    <script type="text/javascript">
+        if (window.location.hostname === "localhost"){jsI18n.setLocale("en");}
+        else if (window.location.hostname === "www.closeandsafe.com"){jsI18n.setLocale("en");}
+        else if (window.location.hostname === "www.proxisur.fr"){jsI18n.setLocale("fr");}
+        else {jsI18n.setLocale("fr");}
+        about_page = function() {window.location.replace(jsI18n.t('about-url'));}
+        contact_page = function() {window.location.replace(jsI18n.t('contact-url'));}
+        form_page = function() {window.location.replace(jsI18n.t('form-url'));}
+
+        var init=function(){
+            initMenu();
+            jsI18n.processPage();
+        }
+    </script>
+
 </head>
 
-<body class="about scrolled">
+<body class="about scrolled" onload="init()">
 
     <div class="wrap">
         <header id="header">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-6">
-                        <strong class="logo"><a href="/"><img src="./images/logo_header.png" alt="Vicinoesicuro"></a></strong>
-                    </div>
-                    <div class="col-6 alignright">
-                        <a href="https://docs.google.com/forms/d/e/1FAIpQLScjZ17Qnd6WUsoW0EELF9wANbregKOdFDtw2VhFTAyzY2bLTA/viewform" target="_blank" class="addbtn desktoponly">Inscrire un magasin</a>
-                        <nav class="menu">
-                            <ul class="header-menu">
-                                <li><a href="/">Carte</a></li>
-                                <li><a href="https://docs.google.com/forms/d/e/1FAIpQLScjZ17Qnd6WUsoW0EELF9wANbregKOdFDtw2VhFTAyzY2bLTA/viewform" target="_blank">Inscrire un magasin</a></li>
-                                <li><a href="/about.html">Infos sur le projet</a></li>
-                                <li><a href="contact.html">Contact</a></li>
-                                <li><a href="https://www.facebook.com/vicinoesicuro/">Suivre sur Facebook</a></li>
-                                <li><a href="https://www.iubenda.com/privacy-policy/30287331" target="_blank">Privacy et Cookie Policy</a></li>
-                                <li class="credits"><strong>Proxisur</strong> est un projet né en italie au début du confinement à Reggio Emilia, et relayé en France<br />Powered by <a href="https://www.woosmap.com/" target="_blank">Woosmap</a></li>
-                            </ul>
-                            <div class="dropdown-btn">
-                                <a href="#">
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                </a>
-                            </div>
-                        </nav>
-                    </div>
-                    <div class="col-12 mobileonly">
-                        <a href="https://docs.google.com/forms/d/e/1FAIpQLScjZ17Qnd6WUsoW0EELF9wANbregKOdFDtw2VhFTAyzY2bLTA/viewform" target="_blank" class="addbtn">Inscrire un magasin</a>
-                    </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-6">
+                    <strong class="logo"><a href="/"><img src="./images/logo_header.png"
+                                                          alt="Vicinoesicuro"></a></strong>
+                </div>
+                <div class="col-6 alignright">
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLScjZ17Qnd6WUsoW0EELF9wANbregKOdFDtw2VhFTAyzY2bLTA/viewform"
+                       target="_blank" class="addbtn desktoponly" data-trans="new-store">Inscrire un magasin</a>
+                    <nav class="menu">
+                        <ul class="header-menu">
+                            <li><a href="/" data-trans="map">Carte</a></li>
+                            <li>
+                                <a href="javascript:" onclick="form_page()"
+                                   target="_blank" data-trans="new-store">Inscrire un magasin</a></li>
+                            <li><a href="javascript:" onclick="about_page();" data-trans="about-project">Infos sur le projet</a></li>
+                            <li><a href="javascript:" onclick="contact_page()" data-trans="contact">Contact</a></li>
+                            <li><a href="https://www.facebook.com/vicinoesicuro/" data-trans="follow-fb">Suivre sur Facebook</a></li>
+                            <li><a href="https://www.iubenda.com/privacy-policy/30287331" target="_blank">Privacy et
+                                Cookie Policy</a></li>
+                            <li class="credits" data-trans="credits"><strong>Proxisur</strong> est un projet né en italie au début du
+                                confinement à Reggio Emilia, et relayé en France<br/>Powered by <a
+                                        href="https://www.woosmap.com/" target="_blank">Woosmap</a></li>
+                        </ul>
+                        <div class="dropdown-btn">
+                            <a href="#">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </a>
+                        </div>
+                    </nav>
+                </div>
+                <div class="col-12 mobileonly">
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLScjZ17Qnd6WUsoW0EELF9wANbregKOdFDtw2VhFTAyzY2bLTA/viewform"
+                       target="_blank" class="addbtn" data-trans="new-store">Inscrire un magasin</a>
                 </div>
             </div>
-            <!-- container-fluid -->
+        </div>
+        <!-- container-fluid -->
         </header>
         <!-- header -->
 
         <div class="main">
             <div>
-                <div class="container-fluid">
+                <div class="container-fluid" data-trans="about-text">
 
                     <h1>Informations sur le projet</h1>
                     <p>À l'heure où il est essentiel de rester chez soi pour lutter contre l'urgence du coronavirus, Proxi Sûr est un outil concret pour soutenir les citoyens et les commerces de proximité.</p>
                     <p>Le projet, <strong>entièrement gratuit</strong>, propose une carte navigable de <strong>toutes les activités qui effectuent les livraisons à domicile:</strong> boutiques, bars, restaurants, marchands de journaux, laveries et plus encore.</p>
                     <p>Les citoyens peuvent choisir le type d'activité dont ils ont besoin, consulter des informations sur les méthodes de livraison et les prix du service, contacter directement le commerçant. Les commerçants, en s'inscrivant à Proxi Sûr, peuvent augmenter leur visibilité sans aucun investissement publicitaire</p>
-                    <!--<p>Possono aderire tutti gli esercenti che hanno conseguito <strong>idoneità alla consegna presso il domicilio come da DPCM</strong> in vigore dal 12 marzo e <strong>capacità di svolgere la consegna autonomamente</strong>.</p>-->
                     <p>Le projet est né à Reggio Emilia à l'initiative de trois professionnels du numérique italiens: <a href="https://www.linkedin.com/in/sghedo/" target="_blank">Daniele Sghedoni</a>, <a href="https://www.linkedin.com/in/cristianoferrari/" target="_blank">Cristiano Ferrari</a>, <a href="https://www.linkedin.com/in/alfredocolella/" target="_blank">Alfredo Colella</a>. Afin d'accélérer l'extension du projet à l'échelle nationale, <a href="https://www.linkedin.com/in/francescodelbosco" target="_blank">Francesco del Bosco</a>, professionnel du secteur numérique à Milan, a également rejoint l'équipe Vicinoesicuro.</p>
                     <p>L’équipe <a href="https://www.webgeoservices.fr" target="_blank">Web Geo Services</a> (éditeur de la plateforme <a href="https://www.woosmap.com" target="_blank">Woosmap</a>) a rejoint le projet pour soutenir sa communauté de développeurs ainsi que le déployer en France et dans d’autres pays d’Europe.</p>
-                    <!--<p>Nasce a Reggio Emilia dall’iniziativa di tre professionisti del settore digitale: <a href="https://www.linkedin.com/in/sghedo/" target="_blank">Daniele Sghedoni</a>, <a href="https://www.linkedin.com/in/cristianoferrari/" target="_blank">Cristiano Ferrari</a>, <a href="https://www.linkedin.com/in/alfredocolella/" target="_blank">Alfredo Colella</a>. Nell’ottica di velocizzare l’estensione del progetto su scala nazionale, nel team di Vicinoesicuro è entrato anche <a href="https://www.linkedin.com/in/francescodelbosco" target="_blank">Francesco del Bosco</a>, anche lui professionista del settore digitale di Milano.</p>-->
                     <p><strong>Proxi et Sûr: rester à la bonne distance des autres ne signifie pas être loin du monde.</strong></p>
 
                 </div>
             </div>
         </div>
     </div>
-
-    <script type="text/javascript" src="./js/scripts_v20.js"></script>
 </body>
 
 </html>
