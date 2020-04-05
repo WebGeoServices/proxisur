@@ -3,7 +3,7 @@
 <head>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-162087636-1"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-162835547-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
 
@@ -13,7 +13,7 @@
 
         gtag('js', new Date());
 
-        gtag('config', 'UA-162087636-1');
+        gtag('config', 'UA-162835547-1');
         ga('set', 'anonymizeIp', true);
     </script>
 
@@ -33,7 +33,7 @@
     <meta property="og:title" id="metatitle2" content="NearbyAndSafe - Home delivery or click&collect">
     <meta property="og:description" id="metadesc2"
           content="The map of nearby stores which offer an home delivery service or drive. To fight again the Coronasvirus we have to stay away from each other but not distant">
-    <meta property="og:image" content="https://www.nearbyandsafe.com/images/proxisur_social.png">
+    <meta property="og:image" content="https://www.nearbyandsafe.com/images/nearbyandsafe_share.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
@@ -42,7 +42,7 @@
     <meta property="twitter:title" id="metatitle3" content="NearbyAndSafe - Home delivery or click&collect">
     <meta property="twitter:description" id="metadesc3"
           content="The map of nearby stores which offer an home delivery service or drive. To fight again the Coronasvirus we have to stay away from each other but not distant">
-    <meta property="twitter:image" content="https://www.nearbyandsafe.com/images/proxisur_social.png">
+    <meta property="twitter:image" content="https://www.nearbyandsafe.com/images/nearbyandsafe_share.png">
 
     <link rel="apple-touch-icon" sizes="57x57" href="/images/favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/images/favicon//apple-icon-60x60.png">
@@ -81,7 +81,7 @@
     <script type="text/javascript">
         if (window.location.hostname === "localhost"){jsI18n.setLocale("en");}
         else if (window.location.hostname === "www.closeandsafe.com" || window.location.hostname === "www.nearbyandsafe.com"){jsI18n.setLocale("en");}
-        else if (window.location.hostname === "www.proxisur.fr"){jsI18n.setLocale("fr");}
+        else if (window.location.hostname === "www.proxisur.fr" || window.location.hostname === "proxisur.fr"){jsI18n.setLocale("fr");}
         else {jsI18n.setLocale("en");}
         //jsI18n.processPage();
         about_page = function() {window.location.replace(jsI18n.t('about-url'));};
@@ -104,8 +104,8 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-6">
-                    <strong class="logo"><a href="/"><img src="./images/logo_header.png"
-                                                          alt="Vicinoesicuro"></a></strong>
+                    <strong class="logo"><a href="/"><img src=""
+                                                          alt="NearbyAndSafe" id="logo-header"></a></strong>
                 </div>
                 <div class="col-6 alignright">
                     <a href="https://docs.google.com/forms/d/e/1FAIpQLScjZ17Qnd6WUsoW0EELF9wANbregKOdFDtw2VhFTAyzY2bLTA/viewform"
@@ -148,18 +148,15 @@
         <div class="main notice">
             <div class="container-notice container-fluid">
                 <div class="notice-image">
-                    <img src="images/notice.png"></div>
+                    <img src="images/notice.png" id="notice-img"></div>
                 <div class="notice-content">
-                    <h2 data-trans="home-delivery">Livraison à domicile ou click&collect</h2>
-                    <p data-trans="explore-around-you">Explorez les activités
-                        <span class="mark">autour de chez vous</span>
-                        qui effectuent les livraisons à domicile ou des click&collect: épiceries, supermarchés, restaurants, bars, papeteries, laveries et plus encore.
+                    <h2 data-trans="home-delivery"></h2>
+                    <p data-trans="explore-around-you">
                     </p>
-                    <p data-trans="help-us"><span class="mark">Aidez nous</span> en renseignant les commerces de votre quartier avec le  <a href="https://docs.google.com/forms/d/e/1FAIpQLScjZ17Qnd6WUsoW0EELF9wANbregKOdFDtw2VhFTAyzY2bLTA/viewform"
-                       target="_blank">formulaire</a>!
+                    <p data-trans="help-us"><span class="mark">
                     </p>
                     <div class="notice-button">
-                        <div id="closeNotice" class="button" data-trans="ok-understood">OK, j'ai compris</div>
+                        <div id="closeNotice" class="button" data-trans="ok-understood"></div>
                     </div>
                 </div>
             </div>

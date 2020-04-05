@@ -2,7 +2,7 @@
 //var woosmapKey = "woos-dac827d8-2486-3f46-99e2-a25338988fdb";
 
 //UK
-var woosmapKey="woos-d7e23af4-a101-38b8-bd8d-0645ed79b46b"
+var woosmapKey="woos-d7e23af4-a101-38b8-bd8d-0645ed79b46b";
 
 //develop
 //var woosmapKey = "woos-e3431ffa-5a40-3838-a856-38fbc7fa30ae";

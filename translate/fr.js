@@ -33,6 +33,8 @@ var translations = {
     "area": "Zones couverte par le service de livraison",
     "cost": "Cout",
     "category": "Categorie de produit",
-    "other-services": "Autres services proposés en plus de la livraison à domicile"
+    "other-services": "Autres services proposés en plus de la livraison à domicile",
+    "logo-img": "images/logo_header.png",
+    "notice-img": "images/notice.png"
 };
 jsI18n.addLocale("fr", translations);

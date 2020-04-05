@@ -8,8 +8,8 @@ var translations = {
 "contact": "Contact",
 "follow-fb": "Follow us on FaceBook",
 "home-delivery": "Home delivery or click&collect",
-"explore-around-you":"<p>Explore <span class=\"mark\">the neighborhood</span> Home delivey or click&collect services</p>",
-"help-us":"<span class=\"mark\">Help us</span> adding new entries on the map <a href=\"https://docs.google.com/forms/d/e/1FAIpQLSezQjY9meuwRPPm7k6kDFcP5cWN3WsPls2eanwo2CfXRr2R-A/viewform\" target=\"_blank\">form</a>!",
+"explore-around-you":"<p>Explore <span class=\"mark\">the neighborhood</span> for home delivery or click&collect services</p>",
+"help-us":"<span class=\"mark\">Help us</span> by adding new entries on the map with this <a href=\"https://docs.google.com/forms/d/e/1FAIpQLSezQjY9meuwRPPm7k6kDFcP5cWN3WsPls2eanwo2CfXRr2R-A/viewform\" target=\"_blank\">form</a>!",
 "ok-understood":"OK, understood",
 "credits": "<strong>Nearby and Safe</strong> is born in Italy at the beginnig of the confinment at Reggio Emilia, and relayed in UK and France<br/>Powered by <a href=\"https://www.woosmap.com/\" target=\"_blank\">Woosmap</a>",
 "contact-text": "<h1>Contact</h1>" +
@@ -34,6 +34,8 @@ var translations = {
 "area": "Available delivery areas",
 "cost": "Cost",
 "category": "Product Category",
-"other-services": "Other services"
+"other-services": "Other services",
+"logo-img": "images/nearbyandsafe.png",
+"notice-img": "images/nearbyandsafe_notice.png"
 };
 jsI18n.addLocale("en", translations);
