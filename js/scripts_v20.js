@@ -18,7 +18,7 @@ var renderInit = function (location) {
   var intialLat = 46.1313871;
   var intialLong = 1;
   var intialZoom = 6;
-  if(location) {
+  if (location) {
     intialLat = location.lat;
     intialLong = location.lng;
     intialZoom = 11;
@@ -59,12 +59,12 @@ var renderInit = function (location) {
       "geocoder": { "region": jsI18n.locale },
       "disableDirections": true,
       "places": {
-            "types": ["geocode"],
-            "componentRestrictions": {"country": "gb"}
-        },
-        "minLength": 3,
+        "types": ["geocode"],
+        "componentRestrictions": { "country": "fr" }
+      },
+      "minLength": 3,
       /*"localities": {
-        "language": jsI18n.locale,
+        "language": "fr",
         "componentRestrictions": {
           "country": [jsI18n.locale]
         },
@@ -77,7 +77,6 @@ var renderInit = function (location) {
         "lng": intialLong
       },
       "initialZoom": intialZoom,
-      "fitBounds": true,
       "tileStyle": {
         "color": "#D81A60",
         "size": 11,
@@ -504,10 +503,9 @@ var renderInit = function (location) {
   };
 
 
-  if (document.readyState === "complete") {
+  if (document.readyState === "complete" || document.readyState === "interactive") {
     loadStoreLocator();
-  }
-  if (document.addEventListener) {
+  } else if (document.addEventListener) {
     document.addEventListener("DOMContentLoaded", loadStoreLocator, false);
   }
   else if (window.addEventListener) {
@@ -516,84 +514,89 @@ var renderInit = function (location) {
     window.attachEvent("onload", loadStoreLocator);
   }
 
+  function openMenu() {
+    $('.dropdown-btn').on('click', function () {
+      $(this).toggleClass('active');
+      $('.header-menu').toggleClass('active');
+      $('body').toggleClass('lock');
+    });
+  };
+  openMenu()
+
+  function changeLang() {
+    $('.lang').on('click', function () {
+      $('.lang').not($(this)).removeClass('active');
+      $(this).addClass('active');
+    })
+  };
+  changeLang()
+
+  function changeHeaderMenu() {
+    $('.header-menu > li').on('click', function () {
+      $('.header-menu > li').not($(this)).removeClass('active');
+      $(this).addClass('active');
+    })
+  };
+  changeHeaderMenu();
+
+  function fixedMenu() {
+    if (window.scrollY > 10 && window.innerWidth < 767) {
+      $('#header').css({ "position": "fixed", "padding-top": "25px", "padding-bottom": "10px", "background-color": "#333333", })
+    } else {
+      $('#header').css({ "height": "", "position": "", "padding-top": "", "padding-bottom": "", "background-color": "", })
+    }
+  };
+  fixedMenu();
+}
+
+$('#closeNotice').on('click', function () {
+  window.setCookie('notice_seen', true);
+  $('.notice').hide();
+});
+if (!window.getCookie('notice_seen')) {
+  $('.notice').show();
 }
 
 var autocompleteService = new woosmap.localities.AutocompleteService(woosmapKey);
 var locality = window.location.hash.substr(1);
 if (locality) {
   autocompleteService.getQueryPredictions({
-    input:locality,
-    components:{
+    input: locality,
+    components: {
       country: ['fr']
     }
   }, response => {
-    if(response && response.localities && response.localities.length > 0) {
+    if (response && response.localities && response.localities.length > 0) {
       document.title = document.title + ' sur ' + response.localities[0].name;
       document.getElementById("metatitle1").setAttribute("content", document.getElementById("metatitle1").getAttribute("content") + ' sur ' + response.localities[0].name);
-      document.getElementById("metadesc1").setAttribute("content", document.getElementById("metadesc1").getAttribute("content").replace('à domicile', 'à domicile' + ' sur ' + response.localities[0].name) );
+      document.getElementById("metadesc1").setAttribute("content", document.getElementById("metadesc1").getAttribute("content").replace('à domicile', 'à domicile' + ' sur ' + response.localities[0].name));
       document.getElementById("metatitle2").setAttribute("content", document.getElementById("metatitle2").getAttribute("content") + ' sur ' + response.localities[0].name);
-      document.getElementById("metadesc2").setAttribute("content", document.getElementById("metadesc2").getAttribute("content").replace('à domicile', 'à domicile' + ' sur ' + response.localities[0].name) );
+      document.getElementById("metadesc2").setAttribute("content", document.getElementById("metadesc2").getAttribute("content").replace('à domicile', 'à domicile' + ' sur ' + response.localities[0].name));
       document.getElementById("metatitle3").setAttribute("content", document.getElementById("metatitle3").getAttribute("content") + ' sur ' + response.localities[0].name);
-      document.getElementById("metadesc3").setAttribute("content", document.getElementById("metadesc3").getAttribute("content").replace('à domicile', 'à domicile' + ' sur ' + response.localities[0].name) );
+      document.getElementById("metadesc3").setAttribute("content", document.getElementById("metadesc3").getAttribute("content").replace('à domicile', 'à domicile' + ' sur ' + response.localities[0].name));
 
       renderInit(response.localities[0].location);
     }
 
   },
-  renderInit
+    renderInit
   );
 } else {
-  renderInit()
+  $.ajax({
+    url: 'https://api.woosmap.com/geolocation/position/',
+    type: 'GET',
+    dataType: 'json',
+    data: {
+      key: woosmapKey
+    }
+  }).always(function (result) {
+    var geoloc = null;
+    if(result && result.latitude && result.longitude) {
+      geoloc = {
+        lat: result.latitude,
+        lng: result.longitude
+      };
+    }
+    renderInit(geoloc);
+  });
 }
-
-
-
-
-  /*const tagLabels = {
-    "habillement": "Habillement",
-    "bar": "Bar",
-    "kiosque_papeterie": "Kiosque à journaux / papeterie",
-    "electronique_telephonie": "Electronique / Téléphonie",
-    "pharmacie": "Pharmacie",
-    "fleuriste": "Fleuriste",
-    "boulangerie": "Boulangerie",
-    "alimentation_generale": "Alimentation Générale",
-    "loisirs": "Loisirs",
-    "hygiene_beaute": "Hygiène et beauté",
-    "pressing": "Pressing",
-    "optique": "Optique",
-    "animalerie": "Animalerie",
-    "puericulture": "Puériculture",
-    "maison_ameublement": "Maison / Ameublement",
-    "restauration": "Restauration",
-    "supermarche": "Supermarché",
-    "autre": "Autre"
-  };
-  const getTags = function (store) {
-    let tagsHTMLList = '';
-    if (store.properties && store.properties.tags.length > 0) {
-      tagsHTMLList = '<p class="storeInfo getTags"><strong>Categorie merceologiche</strong><br />';
-      for (let tag in store.properties.tags) {
-        if (tagLabels[store.properties.tags[tag]]) {
-          tagsHTMLList += '<span>' + tagLabels[store.properties.tags[tag]] + '</span><br>';
-        }
-      }
-      tagsHTMLList += '&nbsp;</p>';
-    }
-    return tagsHTMLList;
-  };
-
-  const getTagsNoTitle = function (store) {
-    let tagsHTMLList = '';
-    if (store.properties && store.properties.tags.length > 0) {
-      tagsHTMLList = '<p class="storeInfo getTagsNoTitle">';
-      for (let tag in store.properties.tags) {
-        if (tagLabels[store.properties.tags[tag]]) {
-          tagsHTMLList += '<span>' + tagLabels[store.properties.tags[tag]] + '</span><br>';
-        }
-      }
-      tagsHTMLList += '&nbsp;<br>';
-      tagsHTMLList += '<span class="btn">Voir plus d\'informations</span></p>';
-    }
-    return tagsHTMLList;
-  };*/

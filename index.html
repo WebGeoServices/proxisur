@@ -14,7 +14,9 @@
         gtag('js', new Date());
 
         gtag('config', 'UA-162835547-1');
-        ga('set', 'anonymizeIp', true);
+        if(typeof ga !== 'undefined') {
+            ga('set', 'anonymizeIp', true);
+        }
     </script>
 
     <meta charset="utf-8">
@@ -145,7 +147,7 @@
     <!-- header -->
 
     <div class="map">
-        <div class="main notice">
+        <div class="main notice" style="display:none">
             <div class="container-notice container-fluid">
                 <div class="notice-image">
                     <img src="images/notice.png" id="notice-img"></div>
@@ -177,7 +179,7 @@
         </div>
     </footer -->
 </div>
-
+<script type="text/javascript" src="js/cookies.js?v=1"></script>
 </body>
 
 </html>
