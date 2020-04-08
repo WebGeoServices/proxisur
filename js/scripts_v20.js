@@ -349,6 +349,7 @@ var renderInit = function (location) {
             "en": ""
           },
           "choices": [
+            { "key": "Chocolats de Pâques", "fr": "Chocolats de Pâques" },
             { "key": "Habillement", "fr": "Habillement", "en": "Clothes" },
             { "key": "Bar", "fr": "Bar", "en": "Bar" },
             { "key": "Kiosque à journaux / papeterie", "fr": "Kiosque à journaux/Papeterie", "en":"Newsstand" },
