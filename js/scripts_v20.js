@@ -337,14 +337,17 @@ var renderInit = function (location) {
             "fr": ""
           },
           "choices": [
+            { "key": "Chocolats de Pâques", "fr": "Chocolats de Pâques" },
+            { "key": "Alimentation générale", "fr": "Alimentation Générale" },
+            { "key": "Pharmacie", "fr": "Pharmacie" },
+            { "key": "Boulangerie", "fr": "Boulangerie" },
+            { "key": "Supermarché", "fr": "Supermarché" },
+            { "key": "Restaurants", "fr": "Restauration" },
+            { "key": "Fleuriste", "fr": "Fleuriste" },
             { "key": "Habillement", "fr": "Habillement" },
             { "key": "Bar", "fr": "Bar" },
-            { "key": "Kiosque à journaux / papeterie", "fr": "Kiosque à journaux/Papeterie" },
+            { "key": "Kiosque à journaux / papeterie", "fr": "Kiosque" },
             { "key": "Electronique / Téléphonie", "fr": "Electronique/Téléphonie" },
-            { "key": "Pharmacie", "fr": "Pharmacie" },
-            { "key": "Fleuriste", "fr": "Fleuriste" },
-            { "key": "Boulangerie", "fr": "Boulangerie" },
-            { "key": "Alimentation générale", "fr": "Alimentation Générale" },
             { "key": "Loisirs", "fr": "Loisirs" },
             { "key": "Parfumerie", "fr": "Parfumerie" },
             { "key": "Pressing", "fr": "Pressing" },
@@ -352,8 +355,6 @@ var renderInit = function (location) {
             { "key": "Animalerie", "fr": "Animalerie" },
             { "key": "Puériculture", "fr": "Puériculture" },
             { "key": "Maison ameublement", "fr": "Maison/Ameublement" },
-            { "key": "Restaurants", "fr": "Restauration" },
-            { "key": "Supermarché", "fr": "Supermarché" },
             { "key": "Autre", "fr": "Autre" }
           ],
           "innerOperator": "or"
