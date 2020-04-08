@@ -1,6 +1,6 @@
 var translations = {
 "map": "Map",
-"new-store":"Subscribe new Store",
+"new-store":"Add new Store",
 "about-url":"/about.html",
 "form-url":"https://docs.google.com/forms/d/e/1FAIpQLSezQjY9meuwRPPm7k6kDFcP5cWN3WsPls2eanwo2CfXRr2R-A/viewform",
 "contact-url":"/contact.html",
