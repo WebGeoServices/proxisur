@@ -15,9 +15,9 @@ var renderInit = function (location) {
         else if (window.location.hostname === "www.proxisur.fr"){jsI18n.setLocale("fr");}
         else {jsI18n.setLocale("en");}
 
-  var intialLat = 46.1313871;
-  var intialLong = 1;
-  var intialZoom = 6;
+  var intialLat = 48.3313871;
+  var intialLong = 2.5;
+  var intialZoom = 5;
   if (location) {
     intialLat = location.lat;
     intialLong = location.lng;
@@ -349,15 +349,16 @@ var renderInit = function (location) {
             "en": ""
           },
           "choices": [
-            { "key": "Chocolats de Pâques", "fr": "Chocolats de Pâques" },
-            { "key": "Habillement", "fr": "Habillement", "en": "Clothes" },
+            { "key": "Chocolats de Pâques", "fr": "Chocolats de Pâques" , "en": "Easter Chocolates"},
+            { "key": "Alimentation générale", "fr": "Alimentation Générale", "en": "Grocery" },
+            { "key": "Pharmacie", "fr": "Pharmacie", "en": "Pharmacy" },
+            { "key": "Boulangerie", "fr": "Boulangerie", "en": "Bakery" },
+            { "key": "Supermarché", "fr": "Supermarché", "en": "Supermarket" },
             { "key": "Bar", "fr": "Bar", "en": "Bar" },
+            { "key": "Fleuriste", "fr": "Fleuriste", "en": "Florist" },
+            { "key": "Habillement", "fr": "Habillement", "en": "Clothes" },
             { "key": "Kiosque à journaux / papeterie", "fr": "Kiosque à journaux/Papeterie", "en":"Newsstand" },
             { "key": "Electronique / Téléphonie", "fr": "Electronique/Téléphonie", "en": "Phone/Electronic" },
-            { "key": "Pharmacie", "fr": "Pharmacie", "en": "Pharmacy" },
-            { "key": "Fleuriste", "fr": "Fleuriste", "en": "Florist" },
-            { "key": "Boulangerie", "fr": "Boulangerie", "en": "Bakery" },
-            { "key": "Alimentation générale", "fr": "Alimentation Générale", "en": "Grocery" },
             { "key": "Loisirs", "fr": "Loisirs", "en": "Hobbies" },
             { "key": "Parfumerie", "fr": "Parfumerie", "en": "Perfumery" },
             { "key": "Pressing", "fr": "Pressing" , "en": "Pressing"},
@@ -366,7 +367,6 @@ var renderInit = function (location) {
             { "key": "Puériculture", "fr": "Puériculture", "en": "Childcare" },
             { "key": "Maison ameublement", "fr": "Maison/Ameublement", "en": "House" },
             { "key": "Restaurants", "fr": "Restauration", "en": "Restaurants" },
-            { "key": "Supermarché", "fr": "Supermarché", "en": "Supermarket" },
             { "key": "Autre", "fr": "Autre", "en": "Other" }
           ],
           "innerOperator": "or"
@@ -514,40 +514,6 @@ var renderInit = function (location) {
   } else if (window.attachEvent) {
     window.attachEvent("onload", loadStoreLocator);
   }
-
-  function openMenu() {
-    $('.dropdown-btn').on('click', function () {
-      $(this).toggleClass('active');
-      $('.header-menu').toggleClass('active');
-      $('body').toggleClass('lock');
-    });
-  };
-  openMenu()
-
-  function changeLang() {
-    $('.lang').on('click', function () {
-      $('.lang').not($(this)).removeClass('active');
-      $(this).addClass('active');
-    })
-  };
-  changeLang()
-
-  function changeHeaderMenu() {
-    $('.header-menu > li').on('click', function () {
-      $('.header-menu > li').not($(this)).removeClass('active');
-      $(this).addClass('active');
-    })
-  };
-  changeHeaderMenu();
-
-  function fixedMenu() {
-    if (window.scrollY > 10 && window.innerWidth < 767) {
-      $('#header').css({ "position": "fixed", "padding-top": "25px", "padding-bottom": "10px", "background-color": "#333333", })
-    } else {
-      $('#header').css({ "height": "", "position": "", "padding-top": "", "padding-bottom": "", "background-color": "", })
-    }
-  };
-  fixedMenu();
 }
 
 $('#closeNotice').on('click', function () {
