@@ -59,8 +59,7 @@ var renderInit = function (location) {
       "geocoder": { "region": jsI18n.locale },
       "disableDirections": true,
       "places": {
-        "types": ["geocode"],
-        "componentRestrictions": { "country": "fr" }
+        "types": ["geocode"]
       },
       "minLength": 3,
       /*"localities": {

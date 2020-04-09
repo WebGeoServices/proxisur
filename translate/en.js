@@ -19,7 +19,7 @@ var translations = {
 "<p>For more info, please contact the team at <a href=\"mailto:nearbyandsafe@webgeoservices.com\">nearbyandsafe@webgeoservices.com</a></p>\n",
 "about-text": "<h1>About the project</h1>\n" +
 "<p>At a time when it is essential to stay at home to fight against the coronavirus emergency, NearbyAndSafe is a concrete tool to support citizens and local businesses.</p>\n" +
-"<p>This project, <strong>free</strong>, is an interactive map of<strong>all activities that offers home delivery or click & collect:</strong> groceries, restaurants, bakery,...</p>\n" +
+"<p>This project, <strong>free</strong>, is an interactive map of <strong>all activities that offers home delivery or click & collect:</strong> groceries, restaurants, bakery,...</p>\n" +
 "<p>Citizens can choose the type of activity they need, consult information on delivery methods and prices for the service, contact the merchant directly. Merchants, by registering with NearbyAndSafe, can increase their visibility without any advertising investment</p>\n" +
 "<p>It was born in Reggio Emilia during the italian lockdown, Vicino e Sicuro was built by 3 digital experts : <a href=\"https://www.linkedin.com/in/sghedo/\" target=\"_blank\">Daniele Sghedoni</a>, <a href=\"https://www.linkedin.com/in/cristianoferrari/\" target=\"_blank\">Cristiano Ferrari</a>, <a href=\"https://www.linkedin.com/in/alfredocolella/\" target=\"_blank\">Alfredo Colella</a>. In order to extend the project at the country level, <a href=\"https://www.linkedin.com/in/francescodelbosco\" target=\"_blank\">Francesco del Bosco</a>, digital professional from Milan area, has joined the team.</p>\n" +
 "<p>Web Geo Services jumped in the journey to help scaling the project in UK.</p>\n" +
