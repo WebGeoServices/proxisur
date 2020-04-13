@@ -5,9 +5,9 @@
 //var woosmapKey="woos-d7e23af4-a101-38b8-bd8d-0645ed79b46b";
 
 //develop
-//var woosmapKey = "woos-e3431ffa-5a40-3838-a856-38fbc7fa30ae";
+var woosmapKey = "woos-e3431ffa-5a40-3838-a856-38fbc7fa30ae";
 //develop UK
-var woosmapKey = "woos-873b24c3-5e0a-3f3c-b088-5af8dd54460f";
+//var woosmapKey = "woos-873b24c3-5e0a-3f3c-b088-5af8dd54460f";
 var jsI18n = {t: function(param){return param;}};
 
 var renderInit = function (location) {
@@ -434,15 +434,8 @@ var renderInit = function (location) {
   } else if (window.attachEvent) {
     window.attachEvent("onload", loadStoreLocator);
   }
-}
+};
 
-$('#closeNotice').on('click', function () {
-  window.setCookie('notice_seen', true);
-  $('.notice').hide();
-});
-if (!window.getCookie('notice_seen')) {
-  $('.notice').show();
-}
 
 var autocompleteService = new woosmap.localities.AutocompleteService(woosmapKey);
 var locality = window.location.hash.substr(1);

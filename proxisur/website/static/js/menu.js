@@ -41,9 +41,15 @@ var initMenu = function() {
                                  "background-color": "",
                              })
         }
-    };
+    }
+    fixedMenu();
+
     $('#closeNotice').on('click', function () {
+        window.setCookie('notice_seen', true);
         $('.notice').hide();
     });
-    fixedMenu();
-}
+    console.log(window.getCookie('notice_seen'));
+    if (!window.getCookie('notice_seen')) {
+        $('.notice').show();
+    }
+};
