@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-13 10:59+0000\n"
+"POT-Creation-Date: 2020-04-13 14:18+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -26,30 +26,68 @@ msgstr ""
 msgid "English"
 msgstr ""
 
-#: website/templates/index.html:29 website/templates/index.html:35
-#: website/templates/index.html:54
+#: website/templates/base.html:26 website/templates/base.html:33
+#: website/templates/base.html:41
+msgid "NearbyAndSafe - Home delivery or click&collect"
+msgstr ""
+
+#: website/templates/base.html:28 website/templates/base.html:35
+msgid ""
+"The map of nearby stores which offer an home delivery service or drive. To "
+"fight again the Coronasvirus we have to stay away from each other but not "
+"distant"
+msgstr ""
+
+#: website/templates/base.html:92 website/templates/base.html:97
+#: website/templates/base.html:115
 msgid "Add new Store"
 msgstr ""
 
-#: website/templates/index.html:32
+#: website/templates/base.html:95
 msgid "Map"
 msgstr ""
 
-#: website/templates/index.html:36
+#: website/templates/base.html:98
 msgid "About the project"
 msgstr ""
 
-#: website/templates/index.html:37
+#: website/templates/base.html:99
 msgid "Contact"
 msgstr ""
 
-#: website/templates/index.html:38
+#: website/templates/base.html:100
 msgid "Follow on Facebook"
 msgstr ""
 
-#: website/templates/index.html:41
+#: website/templates/base.html:101
+msgid "Privacy et Cookie Policy"
+msgstr ""
+
+#: website/templates/base.html:102
 msgid ""
 "<strong>Nearby and Safe</strong> is born in Italy at the beginig of the "
 "confinment at Reggio Emilia, and relayed in UK and France<br/>Powered by <a "
 "href=\"https://www.woosmap.com/\" target=\"_blank\">Woosmap</a>"
+msgstr ""
+
+#: website/templates/index.html:28
+msgid "Home delivery or click&collect"
+msgstr ""
+
+#: website/templates/index.html:30
+msgid ""
+"<p>Explore <span class=\"mark\">the neighborhood</span> for home delivery or "
+"click & collect services</p>"
+msgstr ""
+
+#: website/templates/index.html:33
+msgid ""
+"<span class=\"mark\">Help us</span> by adding new entries on the map with "
+"this <a href=\"https://docs.google.com/forms/d/"
+"e/1FAIpQLSezQjY9meuwRPPm7k6kDFcP5cWN3WsPls2eanwo2CfXRr2R-A/viewform\" target="
+"\"_blank\">form</a>!"
+msgstr ""
+
+#: website/templates/index.html:37
+msgid "OK, understood"
 msgstr ""
