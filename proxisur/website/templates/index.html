@@ -1,0 +1,161 @@
+{% load static %}
+{% load i18n %}
+<html>
+<head>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-162835547-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'UA-162835547-1');
+        if(typeof ga !== 'undefined') {
+            ga('set', 'anonymizeIp', true);
+        }
+    </script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>NearbyAndSafe</title>
+    <meta name="title" id="metatitle1" content="NearbyAndSafe - Home delivery or click&collect">
+    <meta name="description" id="metadesc1"
+          content="The map of nearby stores which offer an home delivery service or drive. To fight again the Coronasvirus we have to stay away from each other but not distant">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.nearbyandsafe.com/">
+
+    <meta property="og:title" id="metatitle2" content="NearbyAndSafe - Home delivery or click&collect">
+    <meta property="og:description" id="metadesc2"
+          content="The map of nearby stores which offer an home delivery service or drive. To fight again the Coronasvirus we have to stay away from each other but not distant">
+    <meta property="og:image" content="https://www.nearbyandsafe.com/images/nearbyandsafe_share.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.nearbyandsafe.com/">
+
+    <meta property="twitter:title" id="metatitle3" content="NearbyAndSafe - Home delivery or click&collect">
+    <meta property="twitter:description" id="metadesc3"
+          content="The map of nearby stores which offer an home delivery service or drive. To fight again the Coronasvirus we have to stay away from each other but not distant">
+    <meta property="twitter:image" content="https://www.nearbyandsafe.com/images/nearbyandsafe_share.png">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="{% static "/images/favicon/apple-icon-57x57.png" %}">
+    <link rel="apple-touch-icon" sizes="60x60" href="{% static "/images/favicon/apple-icon-60x60.png" %}">
+    <link rel="apple-touch-icon" sizes="72x72" href="{% static "/images/favicon/apple-icon-72x72.png" %}">
+    <link rel="apple-touch-icon" sizes="76x76" href="{% static "/images/favicon/apple-icon-76x76.png" %}">
+    <link rel="apple-touch-icon" sizes="114x114" href="{% static "/images/favicon/apple-icon-114x114.png" %}">
+    <link rel="apple-touch-icon" sizes="120x120" href="{% static "/images/favicon/apple-icon-120x120.png" %}">
+    <link rel="apple-touch-icon" sizes="144x144" href="{% static "/images/favicon/apple-icon-144x144.png" %}">
+    <link rel="apple-touch-icon" sizes="152x152" href="{% static "/images/favicon/apple-icon-152x152.png" %}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static "/images/favicon/apple-icon-180x180.png" %}">
+    <link rel="icon" type="image/png" sizes="192x192" href="{% static "/images/favicon/android-icon-192x192.png" %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static "/images/favicon/favicon-32x32.png" %}">
+    <link rel="icon" type="image/png" sizes="96x96" href="{% static "/images/favicon/favicon-96x96.png" %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static "/images/favicon/favicon-16x16.png" %}">
+    <link rel="manifest" href="{% static "/images/favicon/manifest.json" %}">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="{% static "/images/favicon/ms-icon-144x144.png" %}">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- STYLESHEET -->
+    <link rel="stylesheet" href="{% static "css/bs.css" %}">
+    <link rel="stylesheet" href="{% static "css/style_v3.css" %}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script type="text/javascript" src="https://webapp.woosmap.com/webapp.js"></script>
+    <script src="https://sdk.woosmap.com/localities/localities.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBN8I1KsGyHdCkDEHY0G4-m6wZBzVwVVr0&libraries=places"></script>
+
+    <script type="text/javascript" src="{% static "js/menu.js" %}"></script>
+    <script type="text/javascript" src="{% static "js/cookies.js" %}"></script>
+    <!-- <script type="text/javascript" src="translate/en.js"></script> -->
+    <!-- <script type="text/javascript" src="translate/fr.js"></script> -->
+
+    <!-- <script type="text/javascript" src="{% static "js/scripts_v20.js" %}"></script>-->
+    <script type="text/javascript" src="{% url 'javascript-catalog' %}"></script>
+    <script type="text/javascript">
+        var init=function(){
+            initMenu();
+        }
+    </script>
+
+</head>
+
+<body onload="init()">
+
+<div class="wrap">
+    <header id="header">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-6">
+                    <strong class="logo"><a href="/"><img src="{% static "images/nearbyandsafe.png" %}"
+                                                          alt="NearbyAndSafe" id="logo-header"></a></strong>
+                </div>
+                <div class="col-6 alignright">
+                    <a href="{{ form_url }}"
+                       target="_blank" class="addbtn desktoponly" >{% trans "Add new Store"%}</a>
+                    <nav class="menu">
+                        <ul class="header-menu">
+                            <li><a href="/">{% trans "Map" %}</a></li>
+                            <li>
+                                <a href="javascript:" onclick="form_page()"
+                                   target="_blank" >{% trans "Add new Store"%}</a></li>
+                            <li><a href="about.html" >{% trans "About the project" %}</a></li>
+                            <li><a href="contact.html" >{% trans "Contact" %}</a></li>
+                            <li><a href="https://www.facebook.com/vicinoesicuro/" >{% trans "Follow on Facebook" %}</a></li>
+                            <li><a href="https://www.iubenda.com/privacy-policy/30287331" target="_blank">Privacy et
+                                Cookie Policy</a></li>
+                            <li class="credits"><strong>Proxisur</strong> est un projet né en italie au début du
+                                confinement à Reggio Emilia, et relayé en France<br/>Powered by <a
+                                        href="https://www.woosmap.com/" target="_blank">Woosmap</a></li>
+                        </ul>
+                        <div class="dropdown-btn">
+                            <a href="#">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </a>
+                        </div>
+                    </nav>
+                </div>
+                <div class="col-12 mobileonly">
+                    <a href="{{ form_url }}"
+                       target="_blank" class="addbtn">{% trans "Add new Store"%}</a>
+                </div>
+            </div>
+        </div>
+        <!-- container-fluid -->
+    </header>
+    <!-- header -->
+
+    <div class="map">
+        <div class="main notice" style="display:none">
+            <div class="container-notice container-fluid">
+                <div class="notice-image">
+                    <img src="{% static "images/notice.png" %}" id="notice-img"></div>
+                <div class="notice-content">
+                    <h2 data-trans="home-delivery"></h2>
+                    <p data-trans="explore-around-you">
+                    </p>
+                    <p data-trans="help-us"><span class="mark">
+                    </p>
+                    <div class="notice-button">
+                        <div id="closeNotice" class="button" data-trans="ok-understood"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="store-locator" class="map-holder"></div>
+    </div>
+</div>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-04-12 12:16+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: templates/index.html:104 templates/index.html:110 templates/index.html:131
+msgid "Add new Store"
+msgstr "Inscrire un magasin"
+
+#: templates/index.html:107
+msgid "Map"
+msgstr "Carte"
+
+#: templates/index.html:111
+msgid "About the project"
+msgstr "A propos du projet"
+
+#: templates/index.html:112
+msgid "Contact"
+msgstr "Contact"
+
+#: templates/index.html:113
+msgid "Follow on Facebook"
+msgstr "Suivre sur Facebook"
+
+#~ msgid "Welcome to my site."
+#~ msgstr "Bienvenu sur le site"
