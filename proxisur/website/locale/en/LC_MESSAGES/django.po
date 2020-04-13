@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-12 12:16+0200\n"
+"POT-Creation-Date: 2020-04-13 10:59+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,22 +18,38 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: templates/index.html:104 templates/index.html:110 templates/index.html:131
+#: proxisur/settings.py:126
+msgid "French"
+msgstr ""
+
+#: proxisur/settings.py:127
+msgid "English"
+msgstr ""
+
+#: website/templates/index.html:29 website/templates/index.html:35
+#: website/templates/index.html:54
 msgid "Add new Store"
 msgstr ""
 
-#: templates/index.html:107
+#: website/templates/index.html:32
 msgid "Map"
 msgstr ""
 
-#: templates/index.html:111
+#: website/templates/index.html:36
 msgid "About the project"
 msgstr ""
 
-#: templates/index.html:112
+#: website/templates/index.html:37
 msgid "Contact"
 msgstr ""
 
-#: templates/index.html:113
+#: website/templates/index.html:38
 msgid "Follow on Facebook"
+msgstr ""
+
+#: website/templates/index.html:41
+msgid ""
+"<strong>Nearby and Safe</strong> is born in Italy at the beginig of the "
+"confinment at Reggio Emilia, and relayed in UK and France<br/>Powered by <a "
+"href=\"https://www.woosmap.com/\" target=\"_blank\">Woosmap</a>"
 msgstr ""
