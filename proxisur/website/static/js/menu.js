@@ -48,7 +48,6 @@ var initMenu = function() {
         window.setCookie('notice_seen', true);
         $('.notice').hide();
     });
-    console.log(window.getCookie('notice_seen'));
     if (!window.getCookie('notice_seen')) {
         $('.notice').show();
     }
