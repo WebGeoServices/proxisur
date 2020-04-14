@@ -1,0 +1,96 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-04-14 16:33+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: proxisur/settings.py:126
+msgid "French"
+msgstr ""
+
+#: proxisur/settings.py:127
+msgid "English"
+msgstr ""
+
+#: proxisur/settings.py:128
+msgid "German"
+msgstr ""
+
+#: website/templates/base.html:26 website/templates/base.html:33
+#: website/templates/base.html:41
+msgid "NearbyAndSafe - Home delivery or click&collect"
+msgstr ""
+
+#: website/templates/base.html:28 website/templates/base.html:35
+msgid ""
+"The map of nearby stores which offer an home delivery service or drive. To "
+"fight again the Coronasvirus we have to stay away from each other but not "
+"distant"
+msgstr ""
+
+#: website/templates/base.html:92 website/templates/base.html:97
+#: website/templates/base.html:119
+msgid "Add new Store"
+msgstr ""
+
+#: website/templates/base.html:95
+msgid "Map"
+msgstr ""
+
+#: website/templates/base.html:98
+msgid "About the project"
+msgstr ""
+
+#: website/templates/base.html:99
+msgid "Contact"
+msgstr ""
+
+#: website/templates/base.html:100
+msgid "Follow on Facebook"
+msgstr ""
+
+#: website/templates/base.html:101
+msgid "Privacy et Cookie Policy"
+msgstr ""
+
+#: website/templates/base.html:103
+#, python-format
+msgid ""
+"%(title)s is born in Reggio Emilia (Italy) at the beginig of the confinment "
+"at Reggio Emilia, and relayed in UK and France %(website)s"
+msgstr ""
+
+#: website/templates/index.html:30
+msgid "Home delivery or click&collect"
+msgstr ""
+
+#: website/templates/index.html:32
+msgid ""
+"Explore <span class=\"mark\">the neighborhood</span> for home delivery or "
+"click & collect services"
+msgstr ""
+
+#: website/templates/index.html:35
+#, python-format
+msgid ""
+"<span class=\"mark\">Help us</span> by adding new entries on the map with "
+"this %(form)s"
+msgstr ""
+
+#: website/templates/index.html:40
+msgid "OK, understood"
+msgstr ""
