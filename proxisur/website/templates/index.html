@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
 {% load i18n %}
+{% load html_link %}
 
 {% block customjs %}
     <script type="text/javascript" src="https://webapp.woosmap.com/webapp.js"></script>
@@ -28,11 +29,12 @@
                 <div class="notice-content">
                     <h2 data-trans="home-delivery">{% trans "Home delivery or click&collect" %}</h2>
                     <p data-trans="explore-around-you">
-                        {% trans '<p>Explore <span class="mark">the neighborhood</span> for home delivery or click & collect services</p>' %}
+                        <p>{% trans 'Explore <span class="mark">the neighborhood</span> for home delivery or click & collect services' %}</p>
                     </p>
                     <p data-trans="help-us">
-                        {% trans '<span class="mark">Help us</span> by adding new entries on the map with this <a href="https://docs.google.com/forms/d/e/1FAIpQLSezQjY9meuwRPPm7k6kDFcP5cWN3WsPls2eanwo2CfXRr2R-A/viewform" target="_blank">form</a>!' %}
-                        </span class="mark">
+                        {% blocktrans trimmed with form=form_url|html_link:'form'|safe%}
+                        <span class="mark">Help us</span> by adding new entries on the map with this {{ form }}
+                        {% endblocktrans %}
                     </p>
                     <div class="notice-button">
                         <div id="closeNotice" class="button" data-trans="ok-understood">{% trans "OK, understood" %}</div>

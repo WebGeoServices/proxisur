@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-13 14:18+0000\n"
+"POT-Creation-Date: 2020-04-14 16:33+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -26,6 +26,10 @@ msgstr ""
 msgid "English"
 msgstr ""
 
+#: proxisur/settings.py:128
+msgid "German"
+msgstr ""
+
 #: website/templates/base.html:26 website/templates/base.html:33
 #: website/templates/base.html:41
 msgid "NearbyAndSafe - Home delivery or click&collect"
@@ -39,7 +43,7 @@ msgid ""
 msgstr ""
 
 #: website/templates/base.html:92 website/templates/base.html:97
-#: website/templates/base.html:115
+#: website/templates/base.html:119
 msgid "Add new Store"
 msgstr ""
 
@@ -63,31 +67,30 @@ msgstr ""
 msgid "Privacy et Cookie Policy"
 msgstr ""
 
-#: website/templates/base.html:102
+#: website/templates/base.html:103
+#, python-format
 msgid ""
-"<strong>Nearby and Safe</strong> is born in Italy at the beginig of the "
-"confinment at Reggio Emilia, and relayed in UK and France<br/>Powered by <a "
-"href=\"https://www.woosmap.com/\" target=\"_blank\">Woosmap</a>"
-msgstr ""
-
-#: website/templates/index.html:28
-msgid "Home delivery or click&collect"
+"%(title)s is born in Reggio Emilia (Italy) at the beginig of the confinment "
+"at Reggio Emilia, and relayed in UK and France %(website)s"
 msgstr ""
 
 #: website/templates/index.html:30
-msgid ""
-"<p>Explore <span class=\"mark\">the neighborhood</span> for home delivery or "
-"click & collect services</p>"
+msgid "Home delivery or click&collect"
 msgstr ""
 
-#: website/templates/index.html:33
+#: website/templates/index.html:32
+msgid ""
+"Explore <span class=\"mark\">the neighborhood</span> for home delivery or "
+"click & collect services"
+msgstr ""
+
+#: website/templates/index.html:35
+#, python-format
 msgid ""
 "<span class=\"mark\">Help us</span> by adding new entries on the map with "
-"this <a href=\"https://docs.google.com/forms/d/"
-"e/1FAIpQLSezQjY9meuwRPPm7k6kDFcP5cWN3WsPls2eanwo2CfXRr2R-A/viewform\" target="
-"\"_blank\">form</a>!"
+"this %(form)s"
 msgstr ""
 
-#: website/templates/index.html:37
+#: website/templates/index.html:40
 msgid "OK, understood"
 msgstr ""

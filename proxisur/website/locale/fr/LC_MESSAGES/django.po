@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-13 14:18+0000\n"
+"POT-Creation-Date: 2020-04-14 16:33+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,10 +20,14 @@ msgstr ""
 
 #: proxisur/settings.py:126
 msgid "French"
-msgstr ""
+msgstr "Français"
 
 #: proxisur/settings.py:127
 msgid "English"
+msgstr "Anglais"
+
+#: proxisur/settings.py:128
+msgid "German"
 msgstr ""
 
 #: website/templates/base.html:26 website/templates/base.html:33
@@ -36,10 +40,12 @@ msgid ""
 "The map of nearby stores which offer an home delivery service or drive. To "
 "fight again the Coronasvirus we have to stay away from each other but not "
 "distant"
-msgstr "La carte des magasins de proximité qui offrent un service de livraison à domicile ou en drive."
+msgstr ""
+"La carte des magasins de proximité qui offrent un service de livraison à "
+"domicile ou en drive."
 
 #: website/templates/base.html:92 website/templates/base.html:97
-#: website/templates/base.html:115
+#: website/templates/base.html:119
 msgid "Add new Store"
 msgstr "Inscrire un magasin"
 
@@ -63,37 +69,49 @@ msgstr "Suivre sur Facebook"
 msgid "Privacy et Cookie Policy"
 msgstr ""
 
-#: website/templates/base.html:102
+#: website/templates/base.html:103
+#, fuzzy, python-format
+#| msgid ""
+#| "<strong>Nearby and Safe</strong> is born in Italy at the beginig of the "
+#| "confinment at Reggio Emilia, and relayed in UK and France<br/>Powered by "
+#| "<a href=\"https://www.woosmap.com/\" target=\"_blank\">Woosmap</a>"
 msgid ""
-"<strong>Nearby and Safe</strong> is born in Italy at the beginig of the "
-"confinment at Reggio Emilia, and relayed in UK and France<br/>Powered by <a "
-"href=\"https://www.woosmap.com/\" target=\"_blank\">Woosmap</a>"
+"%(title)s is born in Reggio Emilia (Italy) at the beginig of the confinment "
+"at Reggio Emilia, and relayed in UK and France %(website)s"
 msgstr ""
-"<strong>Proxisur</strong> est un projet né en italie au début du confinement "
-"à Reggio Emilia, et relayé en France<br/>Powered by <a href=\"https://www."
-"woosmap.com/\" target=\"_blank\">Woosmap</a></li>"
+"%(title)s est un projet né en italie au début du confinement à Reggio "
+"Emilia, et relayé en France %(website)s"
 
-#: website/templates/index.html:28
+#: website/templates/index.html:30
 msgid "Home delivery or click&collect"
 msgstr "Livraison à domicile ou click&collect"
 
-#: website/templates/index.html:30
+#: website/templates/index.html:32
 msgid ""
-"<p>Explore <span class=\"mark\">the neighborhood</span> for home delivery or "
-"click & collect services</p>"
+"Explore <span class=\"mark\">the neighborhood</span> for home delivery or "
+"click & collect services"
 msgstr ""
 
-#: website/templates/index.html:33
+#: website/templates/index.html:35
+#, python-format
 msgid ""
 "<span class=\"mark\">Help us</span> by adding new entries on the map with "
-"this <a href=\"https://docs.google.com/forms/d/"
-"e/1FAIpQLSezQjY9meuwRPPm7k6kDFcP5cWN3WsPls2eanwo2CfXRr2R-A/viewform\" target="
-"\"_blank\">form</a>!"
-msgstr "<p>Explorez les activités <span class=\"mark\">autour de chez vous</span> qui effectuent les livraisons à domicile ou des click&collect: épiceries, supermarchés, restaurants, bars, papeteries, laveries et plus encore.</p>"
+"this %(form)s"
+msgstr ""
 
-#: website/templates/index.html:37
+#: website/templates/index.html:40
 msgid "OK, understood"
 msgstr "OK, j'ai compris"
+
+#~ msgid ""
+#~ "<span class=\"mark\">Help us</span> by adding new entries on the map with "
+#~ "this <a href=\"https://docs.google.com/forms/d/"
+#~ "e/1FAIpQLSezQjY9meuwRPPm7k6kDFcP5cWN3WsPls2eanwo2CfXRr2R-A/viewform\" "
+#~ "target=\"_blank\">form</a>!"
+#~ msgstr ""
+#~ "<p>Explorez les activités <span class=\"mark\">autour de chez vous</span> "
+#~ "qui effectuent les livraisons à domicile ou des click&collect: épiceries, "
+#~ "supermarchés, restaurants, bars, papeteries, laveries et plus encore.</p>"
 
 #~ msgid "Welcome to my site."
 #~ msgstr "Bienvenu sur le site"

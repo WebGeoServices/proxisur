@@ -12,6 +12,15 @@ DEFAULT_WOOSMAP_KEY = "woos-d7e23af4-a101-38b8-bd8d-0645ed79b46b"
 
 LANGUAGE_CONFIG = {
     'en': {
+        'lang': 'en',
+        'form_url': FORM_URL,
+        'analytics_key': DEFAULT_ANALYTICS_KEY,
+        'maps_key': DEFAULT_MAP_KEY,
+        'woosmap_key': DEFAULT_WOOSMAP_KEY,
+        'facebook_link': DEAFULT_FB_LINK
+    },
+    'de': {
+        'lang': 'de',
         'form_url': FORM_URL,
         'analytics_key': DEFAULT_ANALYTICS_KEY,
         'maps_key': DEFAULT_MAP_KEY,
@@ -19,6 +28,7 @@ LANGUAGE_CONFIG = {
         'facebook_link': DEAFULT_FB_LINK
     },
     'fr': {
+        'lang': 'fr',
         'form_url': FORM_URL,
         'analytics_key': DEFAULT_ANALYTICS_KEY,
         'maps_key': DEFAULT_MAP_KEY,
@@ -26,6 +36,7 @@ LANGUAGE_CONFIG = {
         'facebook_link': "https://business.facebook.com/Proxisur-104811107863421/"
     },
     'it': {
+        'lang': 'it',
         'form_url': FORM_URL,
         'analytics_key': DEFAULT_ANALYTICS_KEY,
         'maps_key': DEFAULT_MAP_KEY,
@@ -36,18 +47,22 @@ LANGUAGE_CONFIG = {
 
 
 def contact(request):
-    lang = request.LANGUAGE_CODE
+    lang = request.LANGUAGE_CODE if request.LANGUAGE_CODE in LANGUAGE_CONFIG else 'en'
     template_name = lang+"/contact.html"
     return render(request, template_name)
 
 
 def about(request):
-    lang = request.LANGUAGE_CODE
+    lang = request.LANGUAGE_CODE if request.LANGUAGE_CODE in LANGUAGE_CONFIG else 'en'
     template_name = lang+"/about.html"
     return render(request, template_name)
 
 
 def index(request):
-    #translation.activate('en')
-    context = LANGUAGE_CONFIG[request.LANGUAGE_CODE]
+    print(request.LANGUAGE_CODE)
+    language = request.LANGUAGE_CODE
+    if request.LANGUAGE_CODE not in LANGUAGE_CONFIG:
+        language = 'en'
+        translation.activate(language)
+    context = LANGUAGE_CONFIG[language]
     return render(request, 'index.html', context)

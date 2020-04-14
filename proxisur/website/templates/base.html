@@ -1,6 +1,6 @@
 {% load static %}
 {% load i18n %}
-<html>
+<html lang="{{ lang }}">
 <head>
         <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id={{ analytics_key }}"></script>
@@ -99,7 +99,11 @@
                             <li><a href="{% url "contact" %}" >{% trans "Contact" %}</a></li>
                             <li><a href="{{ facebook_link }}" >{% trans "Follow on Facebook" %}</a></li>
                             <li><a href="https://www.iubenda.com/privacy-policy/30287331" target="_blank">{%  trans "Privacy et Cookie Policy" %}</a></li>
-                            <li class="credits">{%  trans '<strong>Nearby and Safe</strong> is born in Italy at the beginig of the confinment at Reggio Emilia, and relayed in UK and France<br/>Powered by <a href="https://www.woosmap.com/" target="_blank">Woosmap</a>' %}
+                            <li class="credits">
+                                {% blocktrans trimmed with title='<strong>nearbyandsafe</strong>' website_link='<br/>Powered by <a href="https://www.woosmap.com/" target="_blank">Woosmap</a>'%}
+                                {{ title}} is born in Reggio Emilia (Italy) at the beginig of the confinment at Reggio Emilia, and relayed in UK and France {{ website }}
+                                {% endblocktrans %}
+                            </li>
                         </ul>
                         <div class="dropdown-btn">
                             <a href="#">

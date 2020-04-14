@@ -125,4 +125,5 @@ LOCALE_PATHS = [PROJECT_ROOT + "/website/locale"]
 LANGUAGES = [
   ('fr', _('French')),
   ('en', _('English')),
+  ('de', _('German')),
 ]
