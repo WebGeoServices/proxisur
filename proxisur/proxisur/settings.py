@@ -27,7 +27,7 @@ SECRET_KEY = '3dpn=lcm=^_uj=f(m2zgvs-k7l1_b)*wk)1b+103@-h-=mltch'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['proxisur-website.eba-mq3ujjta.eu-west-2.elasticbeanstalk.com', 'localhost', 'nearbyandsafe.com']
+ALLOWED_HOSTS = ['proxisur-website.eba-mq3ujjta.eu-west-2.elasticbeanstalk.com', 'localhost', 'www.nearbyandsafe.com', 'nearbyandsafe.com']
 
 
 # Application definition

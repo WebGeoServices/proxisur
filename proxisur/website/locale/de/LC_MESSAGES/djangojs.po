@@ -21,35 +21,35 @@ msgstr ""
 #: static/js/custom_descriptions.js:25
 #: website/static/js/custom_descriptions.js:25
 msgid "Phone"
-msgstr ""
+msgstr "Telefon"
 
 #: static/js/custom_descriptions.js:26
 #: website/static/js/custom_descriptions.js:26
 msgid "Email"
-msgstr ""
+msgstr "E-Mail"
 
 #: static/js/custom_descriptions.js:27
 #: website/static/js/custom_descriptions.js:27
 msgid "Website"
-msgstr ""
+msgstr "Webseite"
 
 #: static/js/custom_descriptions.js:34
 #: website/static/js/custom_descriptions.js:34
 msgid "Area"
-msgstr ""
+msgstr "Gebiet"
 
 #: static/js/custom_descriptions.js:40
 #: website/static/js/custom_descriptions.js:40
 msgid "Cost"
-msgstr ""
+msgstr "Kosten"
 
 #: static/js/custom_descriptions.js:47 static/js/custom_descriptions.js:49
 #: website/static/js/custom_descriptions.js:47
 #: website/static/js/custom_descriptions.js:49
 msgid "Category"
-msgstr ""
+msgstr "Kategorie"
 
 #: static/js/custom_descriptions.js:67
 #: website/static/js/custom_descriptions.js:67
 msgid "Other Services"
-msgstr ""
+msgstr "Andere Services"

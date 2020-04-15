@@ -20,77 +20,77 @@ msgstr ""
 
 #: proxisur/settings.py:126
 msgid "French"
-msgstr ""
+msgstr "Französisch"
 
 #: proxisur/settings.py:127
 msgid "English"
-msgstr ""
+msgstr "Englisch"
 
 #: proxisur/settings.py:128
 msgid "German"
-msgstr ""
+msgstr "Deutsch"
 
 #: website/templates/base.html:26 website/templates/base.html:33
 #: website/templates/base.html:41
 msgid "NearbyAndSafe - Home delivery or click&collect"
-msgstr ""
+msgstr "NearbyAndSafe - Lieferung nach Hause oder Click & Collect"
 
 #: website/templates/base.html:28 website/templates/base.html:35
 msgid ""
 "The map of nearby stores which offer an home delivery service or drive. To "
 "fight again the Coronasvirus we have to stay away from each other but not "
 "distant"
-msgstr ""
+msgstr "Die Karte mit Geschäften in der Nähe, die eine Lieferung nach Hause oder Pickup, Drive-in anbieten. Um gegen das Coronas-Virus zu kämpfen, müssen wir voneinander Abstand nehmen, ohne dabei auf Distanz zu gehen"
 
 #: website/templates/base.html:92 website/templates/base.html:97
 #: website/templates/base.html:119
 msgid "Add new Store"
-msgstr ""
+msgstr "Neuen Store hinzufügen"
 
 #: website/templates/base.html:95
 msgid "Map"
-msgstr ""
+msgstr "Karte"
 
 #: website/templates/base.html:98
 msgid "About the project"
-msgstr ""
+msgstr "Über das Projekt"
 
 #: website/templates/base.html:99
 msgid "Contact"
-msgstr ""
+msgstr "Kontakt"
 
 #: website/templates/base.html:100
 msgid "Follow on Facebook"
-msgstr ""
+msgstr "Auf Facebook folgen"
 
 #: website/templates/base.html:101
 msgid "Privacy et Cookie Policy"
-msgstr ""
+msgstr "Datenschutz und Cookie Richtlinien"
 
 #: website/templates/base.html:103
 #, python-format
 msgid ""
 "%(title)s is born in Reggio Emilia (Italy) at the beginig of the confinment "
 "at Reggio Emilia, and relayed in UK and France %(website)s"
-msgstr ""
+msgstr "%(title)s ist zu Beginn des Corona-bedingten Shutdowns in Reggio Emilia (Italien) entstanden und hat sich auf weitere europäische Länder ausgedehnt %(website)s"
 
 #: website/templates/index.html:30
 msgid "Home delivery or click&collect"
-msgstr ""
+msgstr "Lieferung nach Hause oder Click & Collect"
 
 #: website/templates/index.html:32
 msgid ""
 "Explore <span class=\"mark\">the neighborhood</span> for home delivery or "
 "click & collect services"
-msgstr ""
+msgstr "Erkunden Sie <span class=\"mark\">die Umgebung</span> für Lieferservices nach Hause oder Click & Collect Dienste"
 
 #: website/templates/index.html:35
 #, python-format
 msgid ""
 "<span class=\"mark\">Help us</span> by adding new entries on the map with "
 "this %(form)s"
-msgstr ""
+msgstr "<span class=\"mark\">Helfen Sie uns</span>, indem Sie mit diesem Formular neue Einträge auf der Karte hinzufügen %(form)s"
 
 #: website/templates/index.html:40
 msgid "OK, understood"
-msgstr ""
+msgstr "OK, verstanden"

@@ -9,6 +9,8 @@ DEFAULT_ANALYTICS_KEY = "UA-162835547-1"
 DEFAULT_MAP_KEY = "AIzaSyBN8I1KsGyHdCkDEHY0G4-m6wZBzVwVVr0"
 DEAFULT_FB_LINK = "https://business.facebook.com/Nearbyandsafe-106249261051214/"
 DEFAULT_WOOSMAP_KEY = "woos-d7e23af4-a101-38b8-bd8d-0645ed79b46b"
+#develop woos-873b24c3-5e0a-3f3c-b088-5af8dd54460f
+#prod woos-d7e23af4-a101-38b8-bd8d-0645ed79b46b
 
 LANGUAGE_CONFIG = {
     'en': {
@@ -21,7 +23,7 @@ LANGUAGE_CONFIG = {
     },
     'de': {
         'lang': 'de',
-        'form_url': FORM_URL,
+        'form_url': "https://docs.google.com/forms/d/e/1FAIpQLSeczp8a4W7tcf82RURT1FXc21Q-ZOzACqZ4EYb9NuMbY3VBzw/viewform",
         'analytics_key': DEFAULT_ANALYTICS_KEY,
         'maps_key': DEFAULT_MAP_KEY,
         'woosmap_key': DEFAULT_WOOSMAP_KEY,
@@ -49,13 +51,13 @@ LANGUAGE_CONFIG = {
 def contact(request):
     lang = request.LANGUAGE_CODE if request.LANGUAGE_CODE in LANGUAGE_CONFIG else 'en'
     template_name = lang+"/contact.html"
-    return render(request, template_name)
+    return render(request, template_name, LANGUAGE_CONFIG[lang])
 
 
 def about(request):
     lang = request.LANGUAGE_CODE if request.LANGUAGE_CODE in LANGUAGE_CONFIG else 'en'
     template_name = lang+"/about.html"
-    return render(request, template_name)
+    return render(request, template_name, LANGUAGE_CONFIG[lang])
 
 
 def index(request):

@@ -90,14 +90,14 @@ msgstr "Livraison à domicile ou click&collect"
 msgid ""
 "Explore <span class=\"mark\">the neighborhood</span> for home delivery or "
 "click & collect services"
-msgstr ""
+msgstr "Explorer les activités <span class=\"mark\">autour de chez vous</span> qui effectuent les livraisons à domicile"
 
 #: website/templates/index.html:35
 #, python-format
 msgid ""
 "<span class=\"mark\">Help us</span> by adding new entries on the map with "
 "this %(form)s"
-msgstr ""
+msgstr "<span class=\"mark\">Aidez nous</span> en renseignant les commerces de votre quartier avec le %(form)s!"
 
 #: website/templates/index.html:40
 msgid "OK, understood"
