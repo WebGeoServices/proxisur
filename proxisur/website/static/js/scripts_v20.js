@@ -52,6 +52,11 @@ var renderInit = function (location) {
           "filters": {
             "filters": "Choisir une categorie"
           }
+        },
+        "de": {
+          "filters": {
+            "filters": "Wähle eine Kategorie"
+          }
         }
       }
     },
@@ -347,7 +352,8 @@ var renderInit = function (location) {
           "propertyType": "tag",
           "title": {
             "fr": "",
-            "en": ""
+            "en": "",
+            "de": ""
           },
           "choices": [
             { "key": "Chocolats de Pâques", "fr": "Chocolats de Pâques" , "en": "Easter Chocolates", "de": "Osterschokolade"},
