@@ -18,7 +18,7 @@ var renderInit = function (location) {
   if (location) {
     intialLat = location.lat;
     intialLong = location.lng;
-    intialZoom = 11;
+    intialZoom = location.zoom;
   }
 
   var storeLocatorConfig = {
@@ -474,7 +474,20 @@ if (locality) {
     if(result && result.latitude && result.longitude) {
       geoloc = {
         lat: result.latitude,
-        lng: result.longitude
+        lng: result.longitude,
+        zoom: 11
+      };
+    } else if (languageCode === 'de'){
+      geoloc = {
+        lat: 51.165691,
+        lng: 10.451526,
+        zoom: 6
+      };
+    } else if (languageCode === 'en') {
+      geoloc = {
+        lat: 55.378051,
+        lng: -3.435973,
+        zoom: 5
       };
     }
     renderInit(geoloc);
