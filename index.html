@@ -19,6 +19,23 @@
         }
     </script>
 
+ <script>window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+  if (d.getElementById(id)) return t;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
+  fjs.parentNode.insertBefore(js, fjs);
+
+  t._e = [];
+  t.ready = function(f) {
+    t._e.push(f);
+  };
+
+  return t;
+}(document, "script", "twitter-wjs"));</script>    
+    
 <!-- Facebook Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
@@ -94,16 +111,25 @@ src="https://www.facebook.com/tr?id=690778695022007&ev=PageView
 </head>
 
 <body>
+    
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v6.0"></script>
 
 <div class="wrap">
     <header id="header">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-6">
+                <div class="col-8">
                     <strong class="logo"><a href="/"><img src="./images/logo_header.png"
                                                           alt="Vicinoesicuro"></a></strong>
                 </div>
-                <div class="col-6 alignright">
+                <div class="col-1" style="padding-top: 6px">
+                    <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text={% trans "NearbyAndSafe - Home delivery or click&collect" %}"></a>
+                </div>
+                <div class="col-1" style="padding-top: 6px">
+                    <div class="fb-share-button" style="height: 100%" data-href="https://www.nearbyandsafe.com" data-layout="button" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.nearbyandsafe.com%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore"></a></div>
+                </div>
+                <div class="col-2 alignright">
                     <a href="https://docs.google.com/forms/d/e/1FAIpQLScjZ17Qnd6WUsoW0EELF9wANbregKOdFDtw2VhFTAyzY2bLTA/viewform"
                        target="_blank" class="addbtn desktoponly">Inscrire un magasin</a>
                     <nav class="menu">
