@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-13 09:51+0000\n"
+"POT-Creation-Date: 2020-04-19 10:03+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,35 +18,42 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: static/js/scripts_v20.js:405
-msgid "phone"
-msgstr ""
-
+#: static/js/custom_descriptions.js:25
 #: website/static/js/custom_descriptions.js:25
 msgid "Phone"
 msgstr ""
 
+#: static/js/custom_descriptions.js:26
 #: website/static/js/custom_descriptions.js:26
 msgid "Email"
 msgstr ""
 
+#: static/js/custom_descriptions.js:27
 #: website/static/js/custom_descriptions.js:27
 msgid "Website"
 msgstr ""
 
+#: static/js/custom_descriptions.js:34
 #: website/static/js/custom_descriptions.js:34
 msgid "Area"
 msgstr ""
 
+#: static/js/custom_descriptions.js:40
 #: website/static/js/custom_descriptions.js:40
 msgid "Cost"
 msgstr ""
 
+#: static/js/custom_descriptions.js:47 static/js/custom_descriptions.js:49
 #: website/static/js/custom_descriptions.js:47
 #: website/static/js/custom_descriptions.js:49
 msgid "Category"
 msgstr ""
 
+#: static/js/custom_descriptions.js:67
 #: website/static/js/custom_descriptions.js:67
 msgid "Other Services"
+msgstr ""
+
+#: website/static/js/custom_descriptions.js:10
+msgid "Address"
 msgstr ""

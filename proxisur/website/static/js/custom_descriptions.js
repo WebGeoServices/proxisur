@@ -7,7 +7,7 @@ const getName = function (store) {
 // Indirizzo
 const getAddress = function (store) {
     let address = store.properties.address.lines;
-    return '<p class="storeInfo getAddress"><strong>Adresse</strong><br />' + address + '</p>';
+    return '<p class="storeInfo getAddress"><strong>'+gettext("Address")+'</strong><br />' + address + '</p>';
 };
 
 const getAddressNoTitle = function (store) {

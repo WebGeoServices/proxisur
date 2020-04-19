@@ -18,6 +18,24 @@
             ga('set', 'anonymizeIp', true);
         }
     </script>
+
+    <script>window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+  if (d.getElementById(id)) return t;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
+  fjs.parentNode.insertBefore(js, fjs);
+
+  t._e = [];
+  t.ready = function(f) {
+    t._e.push(f);
+  };
+
+  return t;
+}(document, "script", "twitter-wjs"));</script>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -40,7 +58,7 @@
     <meta property="twitter:url" content="https://www.nearbyandsafe.com/">
     <meta property="twitter:title" id="metatitle3" content="{% trans "NearbyAndSafe - Home delivery or click&collect" %}">
     <meta property="twitter:description" id="metadesc3"
-          content="The map of nearby stores which offer an home delivery service or drive. To fight again the Coronasvirus we have to stay away from each other but not distant">
+          content="{% trans "The map of nearby stores which offer an home delivery service or drive. To fight again the Coronasvirus we have to stay away from each other but not distant" %}">
     <meta property="twitter:image" content="https://www.nearbyandsafe.com/images/nearbyandsafe_share.png">
 
     <link rel="apple-touch-icon" sizes="57x57" href="{% static "/images/favicon/apple-icon-57x57.png" %}">
@@ -79,15 +97,25 @@
 
 </head>
 <body onload="init();">
+
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v6.0"></script>
+
 <div class="wrap">
     <header id="header">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-6">
+                <div class="col-8">
                     <strong class="logo"><a href="/"><img src="{% static "images/nearbyandsafe.png" %}"
                                                           alt="NearbyAndSafe" id="logo-header"></a></strong>
                 </div>
-                <div class="col-6 alignright">
+                <div class="col-1" style="padding-top: 6px">
+                    <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text={% trans "NearbyAndSafe - Home delivery or click&collect" %}"></a>
+                </div>
+                <div class="col-1" style="padding-top: 6px">
+                    <div class="fb-share-button" style="height: 100%" data-href="https://www.nearbyandsafe.com" data-layout="button" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.nearbyandsafe.com%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore"></a></div>
+                </div>
+                <div class="col-2 alignright">
                     <a href="{{ form_url }}"
                        target="_blank" class="addbtn desktoponly" >{% trans "Add new Store"%}</a>
                     <nav class="menu">
