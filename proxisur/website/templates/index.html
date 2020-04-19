@@ -32,7 +32,8 @@
                         <p>{% trans 'Explore <span class="mark">the neighborhood</span> for home delivery or click & collect services' %}</p>
                     </p>
                     <p data-trans="help-us">
-                        {% blocktrans trimmed with form=form_url|html_link:'form'|safe%}
+                        {% trans "form text" as form_text %}
+                        {% blocktrans trimmed with form=form_url|html_link:form_text|safe%}
                         <span class="mark">Help us</span> by adding new entries on the map with this {{ form }}
                         {% endblocktrans %}
                     </p>

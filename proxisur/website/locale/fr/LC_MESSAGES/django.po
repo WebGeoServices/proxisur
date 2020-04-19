@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-14 16:33+0000\n"
+"POT-Creation-Date: 2020-04-19 08:52+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -90,16 +90,24 @@ msgstr "Livraison à domicile ou click&collect"
 msgid ""
 "Explore <span class=\"mark\">the neighborhood</span> for home delivery or "
 "click & collect services"
-msgstr "Explorer les activités <span class=\"mark\">autour de chez vous</span> qui effectuent les livraisons à domicile"
+msgstr ""
+"Explorer les activités <span class=\"mark\">autour de chez vous</span> qui "
+"effectuent les livraisons à domicile"
 
 #: website/templates/index.html:35
+msgid "form text"
+msgstr "formulaire"
+
+#: website/templates/index.html:36
 #, python-format
 msgid ""
 "<span class=\"mark\">Help us</span> by adding new entries on the map with "
 "this %(form)s"
-msgstr "<span class=\"mark\">Aidez nous</span> en renseignant les commerces de votre quartier avec le %(form)s!"
+msgstr ""
+"<span class=\"mark\">Aidez nous</span> en renseignant les commerces de votre "
+"quartier avec le %(form)s!"
 
-#: website/templates/index.html:40
+#: website/templates/index.html:41
 msgid "OK, understood"
 msgstr "OK, j'ai compris"
 
