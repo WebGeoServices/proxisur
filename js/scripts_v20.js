@@ -542,7 +542,7 @@ var renderInit = function (location) {
   };
 
 
-  if (document.readyState === "complete" || document.readyState === "interactive") {
+  if (document.readyState === "complete" || document.readyState === "interactive") {
     loadStoreLocator();
   } else if (document.addEventListener) {
     document.addEventListener("DOMContentLoaded", loadStoreLocator, false);
