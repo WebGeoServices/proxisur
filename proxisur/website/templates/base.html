@@ -105,42 +105,47 @@
     <header id="header">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-8">
+                <div class="col-2">
                     <strong class="logo"><a href="/"><img src="{% static "images/nearbyandsafe.png" %}"
                                                           alt="NearbyAndSafe" id="logo-header"></a></strong>
                 </div>
-                <div class="col-1" style="padding-top: 6px">
-                    <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text={% trans "NearbyAndSafe - Home delivery or click&collect" %}"></a>
+
+                <div class="col-10">
+                <div class="row">
+                    <div class="col-2 offset-4" style="padding-top: 6px">
+                        <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text={% trans "NearbyAndSafe - Home delivery or click&collect" %}"></a>
+                    </div>
+                    <div class="col-2" style="padding-top: 6px">
+                        <div class="fb-share-button" style="height: 100%" data-href="https://www.nearbyandsafe.com" data-layout="button" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.nearbyandsafe.com%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore"></a></div>
+                    </div>
+                    <div class="col-4 alignright">
+                        <a href="{{ form_url }}"
+                           target="_blank" class="addbtn desktoponly" >{% trans "Add new Store"%}</a>
+                        <nav class="menu">
+                            <ul class="header-menu">
+                                <li><a href="/">{% trans "Map" %}</a></li>
+                                <li>
+                                    <a href="{{ form_url }}" target="_blank" >{% trans "Add new Store"%}</a></li>
+                                <li><a href="{% url "about" %}" >{% trans "About the project" %}</a></li>
+                                <li><a href="{% url "contact" %}" >{% trans "Contact" %}</a></li>
+                                <li><a href="{{ facebook_link }}" >{% trans "Follow on Facebook" %}</a></li>
+                                <li><a href="https://www.iubenda.com/privacy-policy/30287331" target="_blank">{%  trans "Privacy et Cookie Policy" %}</a></li>
+                                <li class="credits">
+                                    {% blocktrans trimmed with title='<strong>nearbyandsafe</strong>' website_link='<br/>Powered by <a href="https://www.woosmap.com/" target="_blank">Woosmap</a>'%}
+                                    {{ title}} is born in Reggio Emilia (Italy) at the beginig of the confinment at Reggio Emilia, and relayed in UK and France {{ website }}
+                                    {% endblocktrans %}
+                                </li>
+                            </ul>
+                            <div class="dropdown-btn">
+                                <a href="#">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </a>
+                            </div>
+                        </nav>
+                    </div>
                 </div>
-                <div class="col-1" style="padding-top: 6px">
-                    <div class="fb-share-button" style="height: 100%" data-href="https://www.nearbyandsafe.com" data-layout="button" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.nearbyandsafe.com%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore"></a></div>
-                </div>
-                <div class="col-2 alignright">
-                    <a href="{{ form_url }}"
-                       target="_blank" class="addbtn desktoponly" >{% trans "Add new Store"%}</a>
-                    <nav class="menu">
-                        <ul class="header-menu">
-                            <li><a href="/">{% trans "Map" %}</a></li>
-                            <li>
-                                <a href="{{ form_url }}" target="_blank" >{% trans "Add new Store"%}</a></li>
-                            <li><a href="{% url "about" %}" >{% trans "About the project" %}</a></li>
-                            <li><a href="{% url "contact" %}" >{% trans "Contact" %}</a></li>
-                            <li><a href="{{ facebook_link }}" >{% trans "Follow on Facebook" %}</a></li>
-                            <li><a href="https://www.iubenda.com/privacy-policy/30287331" target="_blank">{%  trans "Privacy et Cookie Policy" %}</a></li>
-                            <li class="credits">
-                                {% blocktrans trimmed with title='<strong>nearbyandsafe</strong>' website_link='<br/>Powered by <a href="https://www.woosmap.com/" target="_blank">Woosmap</a>'%}
-                                {{ title}} is born in Reggio Emilia (Italy) at the beginig of the confinment at Reggio Emilia, and relayed in UK and France {{ website }}
-                                {% endblocktrans %}
-                            </li>
-                        </ul>
-                        <div class="dropdown-btn">
-                            <a href="#">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                            </a>
-                        </div>
-                    </nav>
                 </div>
                 <div class="col-12 mobileonly">
                     <a href="{{ form_url }}"
