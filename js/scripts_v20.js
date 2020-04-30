@@ -337,7 +337,6 @@ var renderInit = function (location) {
             "fr": ""
           },
           "choices": [
-            { "key": "Chocolats de Pâques", "fr": "Chocolats de Pâques" },
             { "key": "Alimentation générale", "fr": "Alimentation Générale" },
             { "key": "Pharmacie", "fr": "Pharmacie" },
             { "key": "Boulangerie", "fr": "Boulangerie" },
@@ -355,6 +354,7 @@ var renderInit = function (location) {
             { "key": "Animalerie", "fr": "Animalerie" },
             { "key": "Puériculture", "fr": "Puériculture" },
             { "key": "Maison ameublement", "fr": "Maison/Ameublement" },
+            { "key": "Chocolats de Pâques", "fr": "Chocolats de Pâques" },
             { "key": "Autre", "fr": "Autre" }
           ],
           "innerOperator": "or"
