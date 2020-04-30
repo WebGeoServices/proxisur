@@ -354,7 +354,7 @@ var renderInit = function (location) {
             { "key": "Animalerie", "fr": "Animalerie" },
             { "key": "Puériculture", "fr": "Puériculture" },
             { "key": "Maison ameublement", "fr": "Maison/Ameublement" },
-            { "key": "Chocolats de Pâques", "fr": "Chocolats de Pâques" },
+            { "key": "Chocolats de Pâques", "fr": "Chocolatier" },
             { "key": "Autre", "fr": "Autre" }
           ],
           "innerOperator": "or"
